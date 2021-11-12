@@ -9,7 +9,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-#grab the enviornment variables
+# grab the enviornment variables
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
