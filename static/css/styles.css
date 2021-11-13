@@ -73,7 +73,8 @@ html, body {
 
 .section-button {
     background-color: #56C3D4;
-    color: #fafafa;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
   }
   
 .section-button:hover, .section-button:active {
