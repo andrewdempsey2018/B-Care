@@ -2,25 +2,48 @@
 
 {% block content %}
 
-<h1>Your Stories</h1>
-
-{% for story in stories %}
-
-<h4>_________________________</h4>
-
-<h4>{{ story.title }}</h4>
-<p>{{ story.text }}</p>
-
-<a href="{{ url_for('edit_story_page', storyId=story._id) }}">[edit]</a>
-<a href="{{ url_for('delete_story', storyId=story._id) }}">[delete]</a>
-
-<h4>_________________________</h4>
-
-{% endfor %}
-
-<ul class="list-unstyled">
-    <li><a href="{{ url_for('create_story') }}">Share your story</a></li>
-    <li><a href="{{ url_for('index') }}">back</a></li>
-</ul>
+<section class="bg-ss">
+    <div class="container">
+        <div class="row">
+            <h2 class="section-heading-1 text-uppercase">Share Your Story</h2>
+        </div>
+        <hr class="heading-hr mx-auto">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="pt-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officiis architecto voluptates nulla, odit modi asperiores placeat. Ab perspiciatis ut, eveniet nulla eum incidunt illum nisi, vitae, explicabo inventore atque!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            {% for story in stories %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="card story-card">
+                        <div class="card-img">
+                            <img src="#" alt="user image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">{{ story.title }}</h4>
+                            <p class="card-date">{{ story.date }}</p>
+                            <p class="card-text">{{ story.text }}</p>
+                            <a href="{{ url_for('edit_story_page', storyId=story._id) }}">[edit]</a>
+                            <a href="{{ url_for('delete_story', storyId=story._id) }}">[delete]</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <ul class="list-unstyled">
+        <li><a href="{{ url_for('create_story') }}">Share your story</a></li>
+        <li><a href="{{ url_for('index') }}">back</a></li>
+    </ul>
+</section>
+    
 
 {% endblock %}
