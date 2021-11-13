@@ -191,6 +191,13 @@ html, body {
     color: #2f7f79;
 }
 
+/* News page */
+#news-header {
+    background: url('/static/img/news.jpg') no-repeat center;
+    background-size: cover;
+    height: 40rem;
+}
+
 /* Footer */
 footer {
     background-color: #3e4551;
