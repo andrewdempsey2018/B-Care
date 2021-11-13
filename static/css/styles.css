@@ -51,7 +51,7 @@ html, body {
   
 .sub-heading {
     color: #fafafa;
-    text-shadow: 0.1rem 0.1rem #212324;
+    text-shadow: 0.25rem 0.25rem 0.8rem #343a40;
 }
 
 .section-heading-1 {
@@ -141,6 +141,10 @@ a:link {
         height: 40rem;
     }
 
+    .main-heading {
+        margin-top: 17rem;
+        font-size: 2.4rem;
+    }
 }
 
 /* Display on large devices */
@@ -157,10 +161,9 @@ a:link {
 
     .main-heading {
         margin-top: 14rem;
-        font-family: 'Montserrat', sans-serif;
         font-size: 3rem;
         font-weight: 500;
-
+        
       }
 
       .section-heading-1 {
