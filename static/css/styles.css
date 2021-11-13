@@ -115,6 +115,12 @@ html, body {
     margin: 10px auto;
 }
 
+.zoom-effect:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+        transform: scale(1.05);
+  }
+
 .bg-ss {
     background-color: #eee5e7;
 }
