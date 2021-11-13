@@ -63,7 +63,7 @@
                     Lorem ipsum dolor sit amet, iriure aliquid ancillae id duo, facete copiosae ex has. Sea assum volumus atomorum ea, sit viderer invidunt reformidans ea. Eu graeci maiorum aliquando his. Duo in idque scriptorem, atqui complectitur per te. His utamur electram argumentum id, sit ex harum dictas habemus, vix an vide pertinacia rationibus. Sed modo dicat vitae in, ea alia vitae eum.
                 </p>
                 <div class="row text-center mt-5">
-                    <div class="col-12">
+                    <div class="col-12 mb-5">
                         <a class="btn btn-md justify-content-center section-button text-uppercase" href="#" 
                             role="button" aria-label="explore about">
                             share your story
@@ -75,7 +75,7 @@
     </div>
 </section>
 <!-- Chat section -->
-<section class="mb-5">
+<section>
     <div class="container">
         <div class="row">
             <h2 class="section-heading-1 text-uppercase">Live Chat</h2>
@@ -83,46 +83,76 @@
         <hr class="heading-hr mx-auto">
     </div>
     <div class="container">
-        <div class="row pt-4">
+        <div class="row">
             <div class="col-lg-6 col-sm-12 para-center">
                 <p class="section-p">
                     Lorem ipsum dolor sit amet, iriure aliquid ancillae id duo, facete copiosae ex has. Sea assum volumus atomorum ea, sit viderer invidunt reformidans ea. Eu graeci maiorum aliquando his. Duo in idque scriptorem, atqui complectitur per te. His utamur electram argumentum id, sit ex harum dictas habemus, vix an vide pertinacia rationibus. Sed modo dicat vitae in, ea alia vitae eum.
                 </p>
-                <div class="row text-center mt-5">
-                    <div class="">
-                        <a class="btn btn-md justify-content-center section-button text-uppercase" href="#" 
-                            role="button" aria-label="explore about">
-                            live chat
-                        </a>
-                    </div>
-                </div>
             </div>
             <div class="col-lg-6 col-sm-12">
                 <img src="{{ url_for('static', filename='img/chat.jpg') }}" alt="Woman looking at the mobilephone" class="img-fluid p-2" id="chat-img">
+            </div>
+            <div class="row text-center my-5">
+                <div>
+                    <a class="btn btn-md justify-content-center section-button text-uppercase" href="#" 
+                        role="button" aria-label="explore about">
+                        live chat
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- News section -->
-<section class="mb-5">
+<!-- Data from the database -->
+<section class="mb-5 bg-news">
     <div class="container">
         <div class="row">
             <h2 class="section-heading-1 text-uppercase">News</h2>
         </div>
         <hr class="heading-hr mx-auto">
     </div>
-    <div class="container">
-        <div class="row pt-4">
-            <div class="col-lg-6 col-sm-12 para-center">
-                <div class="row text-center mt-5">
-
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-12">
-                
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <article class="article-post mx-auto">
+                    <figure class="article">
+                        <div class="article-overlay">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='img/chat.jpg') }}" 
+                                    class="card-img-top img-fluid" alt="article image">
+                            </a>
+                        </div>
+                    </figure>
+                    <div class="article-content">
+                        <div class="article-header">
+                            <h5 class="article-card-title">
+                                <a href=""></a>
+                            </h5>
+                            <div class="article-meta text-muted">
+                                
+                            </div>
+                        </div>
+                        <div class="article-overview article-card-text">
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="article-footer">
+                            <div class="row">
+                                <div class="col-6 text-left footer-link">
+                                    <span>
+                                        <a href="#" class="article-link">
+                                            Read more &#8594;
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
-    </div>
 </section>
 
 {% endblock %}

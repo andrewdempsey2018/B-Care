@@ -55,7 +55,7 @@ html, body {
 }
 
 .section-heading-1 {
-    margin-top: 6rem;
+    margin-top: 3rem;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
 }
@@ -103,10 +103,70 @@ html, body {
     margin-right: 4rem;
 }
 
-.para-center {
-    margin: auto;
-    width: 50%;
-    padding: 0.625rem;
+/* News section on the homepage*/
+.bg-news {
+    background-color: #F8E3E8!important;
+}
+
+.post .article-header {
+    margin-bottom: 0.94rem;
+}
+  
+.article-post {
+    width: 85%;
+    margin-bottom: 4rem;
+}
+  
+.article-post .article-content {
+    -webkit-box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.15);
+    padding: 1.875rem;
+    position: relative;
+    background: #fff;
+    margin-top: -4.68rem;
+}
+  
+.article-post .article-overlay {
+    position: relative;
+    left: 1.35rem;
+    margin-bottom: 0;
+}
+  
+.article-post .article-overview p:last-of-type {
+    margin-bottom: 0;
+}
+  
+.article-post .article-footer {
+    border-top: 1px solid #ebebeb;
+    padding-top: 0.94rem;
+    margin-top: 1.25rem;
+}
+  
+.card-img-top {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+  
+.article-card-title a {
+    color: #439B94;
+}
+  
+.footer-link > a {
+    color: #56C3D4;
+}
+  
+.article-post .article-footer .footer-meta a i {
+    font-size: 1rem;
+    margin-left: 0.125rem;
+}
+  
+.article-link {
+    color: #439B94;
+}
+  
+.article-link:hover {
+    color: #2f7f79;
 }
 
 /* Footer */
@@ -119,8 +179,8 @@ footer {
     background-color: rgba(0, 0, 0, 0.2);
 }
   
-  .footer-email a, 
-  .footer-phone a {
+.footer-email a, 
+.footer-phone a {
     color: #fafafa;
     text-decoration: underline;
 }
@@ -129,6 +189,9 @@ a:link {
     text-decoration: none;
 }
 
+.para-center {
+    padding-top: 3rem;
+}
 
 /* Media Queries */
 /* Display on tablet devices */  
@@ -145,6 +208,12 @@ a:link {
     .main-heading {
         margin-top: 17rem;
         font-size: 2.4rem;
+    }
+
+    .page-background {
+        height: 22rem;
+        margin-top: -15rem;
+        margin-left: -8rem;
     }
 }
 
@@ -169,6 +238,7 @@ a:link {
 
       .section-heading-1 {
         font-size: 2.1rem;
+        margin-top: 6rem;
     }
 
       .page-background {
@@ -177,6 +247,12 @@ a:link {
         margin-left: -10rem;
     }
 
+    .para-center {
+        margin: auto;
+        width: 50%;
+        padding: 0.625rem;
+        padding-top: 0;
+    }
 }
 
 /* iPhone 5 only (portrait mode)
