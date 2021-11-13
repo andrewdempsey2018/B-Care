@@ -94,13 +94,35 @@ html, body {
     margin-left: -2rem;
 }
 
-/* Share Story section */
+/* Share Story section on homepage*/
 .bg-story {
     background-color: #EAF4F5!important;
 }
 
 #story-img {
     margin-right: 4rem;
+}
+
+/* Share your Story template */
+.story-card {
+    max-width: 18.75rem;
+    background-color: #7ECDDA;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 25px rgb(0 0 0 / 10%);
+    box-shadow: 0px 0px 25px rgb(0 0 0 / 10%);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+}
+
+.zoom-effect:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+        transform: scale(1.05);
+  }
+
+.bg-ss {
+    background-color: #eee5e7;
 }
 
 /* News section on the homepage*/
