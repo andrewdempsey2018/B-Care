@@ -16,6 +16,14 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officiis architecto voluptates nulla, odit modi asperiores placeat. Ab perspiciatis ut, eveniet nulla eum incidunt illum nisi, vitae, explicabo inventore atque!
                 </p>
             </div>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="{{ url_for('create_story') }}">Share your story</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('index') }}">back</a>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="container">
@@ -38,11 +46,6 @@
             {% endfor %}
         </div>
     </div>
-    
-    <ul class="list-unstyled">
-        <li><a href="{{ url_for('create_story') }}">Share your story</a></li>
-        <li><a href="{{ url_for('index') }}">back</a></li>
-    </ul>
 </section>
     
 
