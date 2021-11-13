@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="news-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 my-auto">
+                <h1 class="main-heading text-uppercase">
+                    Find the latest News
+                </h1>
+                <h3 class="sub-heading">
+                    The latest news and updates.
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bg-ss">
+    <div class="container">
+        <div class="row">
+            <h2 class="section-heading-1 text-uppercase">News</h2>
+        </div>
+        <hr class="heading-hr mx-auto">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="font-italic lead pt-3">
+                    Looking for the latest news? You've come to the right place! B-Care team is always on the hunt for meaningful topics about women and men health.
+                </p>
+            </div>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            
+                <div class="col-lg-4 col-md-6 mb-5 justify-content-center d-flex">
+                    <article class="article-post mx-auto">
+                        <figure class="article">
+                            <div class="article-overlay">
+                                <a href="#">
+                                    <img src="{{ url_for('static', filename='img/healthy_food.jpg') }}" 
+                                        class="card-img-top img-fluid" alt="article image">
+                                </a>
+                            </div>
+                        </figure>
+                        <div class="article-content">
+                            <div class="article-header">
+                                <h5 class="article-card-title">
+                                    <a href=""></a>
+                                </h5>
+                                <div class="article-meta text-muted">
+                                    
+                                </div>
+                            </div>
+                            <div class="article-overview article-card-text">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                            <div class="article-footer">
+                                <div class="row">
+                                    <div class="col-6 text-left footer-link">
+                                        <span>
+                                            <a href="#" class="article-link">
+                                                Read more &#8594;
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+        </div>
+    </div>
+</section>
+
+<a href="#">[edit]</a>
+<a href="#">[delete]</a>
+
+{% endfor %}
+<ul class="list-unstyled">
+    <li><a href="#">Add new information</a></li>
+    <li><a href="{{ url_for('index') }}">back</a></li>
+</ul>
+
+{% endblock %}
