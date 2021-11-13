@@ -26,6 +26,7 @@ html, body {
 #admin-user {
     padding-left: 8rem;
     padding-top: 0.4rem;
+    color: #000000;
 }
 
 /* Hero image */
@@ -103,7 +104,25 @@ html, body {
     padding: 0.625rem;
 }
 
-/* Chat section */
+/* Footer */
+footer {
+    background-color: #3e4551;
+    width: 100%;
+}
+  
+  #copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+  
+  .footer-email a, 
+  .footer-phone a {
+    color: #fafafa;
+    text-decoration: underline;
+}
+
+a:link {
+    text-decoration: none;
+}
 
 
 /* Media Queries */
