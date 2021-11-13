@@ -83,12 +83,23 @@ TBA
 
 Delicate and soothing color palette will be chosen and the balance with calmer, contemporary mood for the audience will be tried to get achieved. Below colors will be used for the website:
 
-TBA
+- Middle Blue (#56C3D4)
 
-<h2 align="center"><img src="#" alt="color palette" target="_blank" width="70%" height="70%"></h2>
+- Lavander Blush (#B3D5D2)
+- Azure X 11 Web Color (#EAF4F5)
+- Illuminating Emarald (#149285)
+- Amaranth Pink (#FFA7B3)
+- Metallic Seaweed (#4A8493)
 
+<h2 align="center"><img src="readme/general/color_palette.png" alt="color palette" target="_blank" width="70%" height="70%"></h2>
 
 [Coolors](https://coolors.co/) was used to create a color palette.
+
+Shades of blue and pink colors will be selected as the primary colors because these colors are associated with Breast Cancer Awareness month. Actually pink is primarily associated; however, our team believes that men should be equally represented.
+
+White color will be used primarily as the background color because it represents reverence, purity, and innocence. This association calms people and influences their brain activity in a very positive way.
+
+Metallic Seaweed (#4A8493) will be used only for footer section and it combines great with the blue and pink colors on the website.
 
 ## Fonts
 
