@@ -29,11 +29,15 @@ html, body {
     color: #000000;
 }
 
+#admin-user-mobile {
+    color: #000000;
+}
+
 /* Hero image */
 #home-header {
     background: url('/static/img/hero.jpg') no-repeat center;
     background-size: cover;
-    height: 39rem;
+    height: 40rem;
 }
 
 .main-heading {
