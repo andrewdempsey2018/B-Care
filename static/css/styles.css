@@ -85,13 +85,26 @@ html, body {
             transform: scale(1.05);
 }
 
-/* Breast Cancer Awareness section */
+/* Breast Cancer Awareness section on homepage */
 .page-background {
     background: url('/static/img/ribbon_adobespark.png') no-repeat center;
     background-size: cover;
     height: 20rem;
     margin-top: -12rem;
     margin-left: -2rem;
+}
+
+/* Awareness (Information) page */
+#awareness-header {
+    background: url('/static/img/bca.jpg') no-repeat center;
+    background-size: cover;
+    height: 40rem;
+}
+
+.intro-para {
+    font-family: 'Roboto', sans-serif;
+    color: #212529;
+    font-size: 1.2rem;
 }
 
 /* Share Story section on homepage*/
