@@ -1,42 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- must import socket.io itself (seperate from Flask-socketIO -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.min.js"
+    integrity="sha512-2ho+gY0H62N4Z9oxD422L2ZYXiOMq9l+Aub1QNz4Z4UDOtDVxz4vk6O6R3Hqqc9Y7qSvZFl7cy3+eZ/ITnUrLA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat</title>
+{% extends 'base.html' %}
 
-    <!-- must import socket.io itself (seperate from Flask-socketIO -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.min.js"
-        integrity="sha512-2ho+gY0H62N4Z9oxD422L2ZYXiOMq9l+Aub1QNz4Z4UDOtDVxz4vk6O6R3Hqqc9Y7qSvZFl7cy3+eZ/ITnUrLA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% block content %}
 
-</head>
-
-<body>
-
-    <h1>Chat</h1>
-
-    <div id="main_container">
-        <div id="message_area">
-            <p>Messages will appear here</p>
-        </div>
-        <div>
-            <input type="text" id="username" name="username" placeholder="Enter a username">
-        </div>
-        <div>
-            <textarea type="text" id="messageField" name="messageField" placeholder="Enter your message"></textarea>
-        </div>
-        <div>
-            <input type="submit" id="sendButton" value="Send">
-        </div>
+<h1>Never be afraid to speak</h1>
+<div id="main_container" class="d-flex p-2">
+    <div class="alert alert-primary overflow-auto w-50" style="height: 200px" id="message_area" role="alert">
     </div>
+    <div class="form-group">
+        <input type="text" id="username" name="username" placeholder="Enter a username">
+    </div>
+    <div>
+        <textarea type="text" id="messageField" name="messageField" placeholder="Enter your message"></textarea>
+    </div>
+    <div>
+        <input type="submit" id="sendButton" value="Send">
+    </div>
+</div>
 
-    <br>
-    <a href="{{ url_for('index') }}">[back]</a>
+<br>
+<a href="{{ url_for('index') }}">[back]</a>
 
-    <script src="../static/js/chat.js"></script>
-</body>
+<script src="../static/js/chat.js"></script>
 
-</html>
+{% endblock %}
