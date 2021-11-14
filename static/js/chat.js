@@ -24,3 +24,10 @@ socket.on('updateui', data => {
     message_area.innerHTML += data + '<br>';
 })
 
+/*Andrew's woman in tech... For my woman in tech I'd like to nominate Abi Harrison, 
+a UI developer at giffgaff, public speaker, blogger and musician. Abi is a super 
+skilled coder with lots of neat tricks up her sleeve but more than that... 
+she shows what true diversity in the tech sector is all about - 
+she brings her caring and supportive spirit to all those who share her passion! 
+Long live The Zombie King!!!! */
+

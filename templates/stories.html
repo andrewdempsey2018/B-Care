@@ -13,17 +13,18 @@
         <div class="row">
             <div class="col-12">
                 <p class="pt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officiis architecto voluptates
-                    nulla, odit modi asperiores placeat. Ab perspiciatis ut, eveniet nulla eum incidunt illum nisi,
-                    vitae, explicabo inventore atque!
+                    We beleive nobody should be afraid to share their experience of breast cancer, nobody
+                    should suffer in silence. Share your story here and help inspire others with your
+                    bravery
                 </p>
             </div>
             <ul class="list-unstyled">
                 <li>
-                    <a href="{{ url_for('create_story') }}">Share your story</a>
+                    <a href="{{ url_for('create_story') }}"
+                        class="btn btn-lg justify-content-center section-button">Share your story</a>
                 </li>
                 <li>
-                    <a href="{{ url_for('index') }}">back</a>
+                    <a href="{{ url_for('index') }}" class="btn btn-lg justify-content-center section-button">back</a>
                 </li>
             </ul>
         </div>
@@ -34,15 +35,23 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card story-card zoom-effect">
                     <div class="card-img">
-                        <img src="#" alt="user image">
+                        <!--generate image url using jinja. generate random number used to select a static image-->
+                        {% set imgurl1 ="../static/img/face" %}
+                        {% set imgurl2int = range(1, 15) | random %}
+                        {% set imgurl2string = imgurl2int|string %}
+                        {% set imgurl3 = ".png" %}
+                        {% set fullurl = imgurl1 + imgurl2string + imgurl3 %}
+                        <img src="{{fullurl}}" alt="user image">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">{{ story.title }}</h4>
                         <p class="card-date">{{ story.date }}</p>
                         <p class="card-text">{{ story.text }}</p>
                         {% if user!="guest" %}
-                        <a href="{{ url_for('edit_story_page', storyId=story._id) }}">[edit]</a>
-                        <a href="{{ url_for('delete_story', storyId=story._id) }}">[delete]</a>
+                        <a href="{{ url_for('edit_story_page', storyId=story._id) }}"
+                            class="btn btn-sm justify-content-center section-button">Edit</a>
+                        <a href="{{ url_for('delete_story', storyId=story._id) }}"
+                            class="btn btn-sm justify-content-center section-button">Delete</a>
                         {% endif %}
                     </div>
                 </div>
