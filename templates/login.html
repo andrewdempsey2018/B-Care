@@ -1,19 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>Login</h1>
-
-<form action="{{ url_for('index') }}" method="POST">
-    <label for="title">username</label>
-    <input type="text" id="username" name="username">
-    <label for="text">password</label>
-    <input type="password" id="password" name="password">
-    <button type="submit">Login</button>
+<div id="login-main">
+    <div id="login-console">
+        <h1 id="login-h1">Login</h1>
+        <form action="{{ url_for('index') }}" method="POST">
+            <div class="text-left login-input-div">
+                <label for="title">Username</label>
+            </div>
+            <div class="login-input-div">
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="text-left login-input-div">
+                <label for="text">Password</label>
+            </div>
+            <div class="login-input-div">
+                <input type="password" id="password" name="password">
+            </div>
+            <input type="checkbox">
+            <span>Remember Me!</span>
+            <div id="login-button">
+                <button type="submit" class="button1 zoom-effect btn-lg">Login</button>
+            </div>
+        </form>
     </div>
-</form>
-
-</form>
+</div>
 
 {% with message = get_flashed_messages() %}
 <h3>{{ message }}</h3>
