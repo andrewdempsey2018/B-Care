@@ -2,59 +2,151 @@
 
 {% block content %}
 
-<div id="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 my-auto">
-                <h1 class="main-heading text-uppercase">
-                    
-                </h1>
-                <h3 class="sub-heading">
-                    
+    <div id="awareness-header">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12 my-auto">
+                    <h1 class="main-heading text-uppercase">
+                        Raise awareness about the impact of breast cancer
+                    </h1>
+                    <h3 class="sub-heading">
+                        Breast cancer is the most common cancer in women worldwide.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="bg-ss">
+        <div class="container">
+            <div class="row text-center">
+                <h3 class="section-heading-1 text-uppercase">
+                    Breast cancer is the most common cancer in women worldwide
                 </h3>
             </div>
-        </div>
-    </div>
-</div>
-
-<section class="bg-ss">
-    <div class="container">
-        <div class="row">
-            <h2 class="section-heading-1 text-uppercase">Breast Cancer Awareness</h2>
-        </div>
-        <hr class="heading-hr mx-auto">
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <p class="font-italic lead pt-3">
-                    
+            <div class="row">
+                <p class="intro-para lead mt-3 text-center">
+                    Breast cancer is a disease where malignant (cancerous) cells form in the breast.
+                    The facts remain that while women and men of any age can be diagnosed with breast cancer,
+                    most women diagnosed with breast cancer are over the age of 50, but younger women and men can also get breast cancer.
+                    About 1 in 8 women are diagnosed with breast cancer during their lifetime. There's a good chance of recovery if it's detected at an early stage.
                 </p>
             </div>
-            </ul>
         </div>
-    </div>
-
-
-
-<h1>Information</h1>
-
-{% for info in allInfo %}
-
-<h4>_________________________</h4>
-
-<h4>{{ info.title }}</h4>
-<p>{{ info.text }}</p>
-
-<a href="{{ url_for('edit_info_page', infoId=info._id) }}">[edit]</a>
-<a href="{{ url_for('delete_info', infoId=info._id) }}">[delete]</a>
-
-<h4>_________________________</h4>
-
-{% endfor %}
-<ul class="list-unstyled">
-    <li><a href="{{ url_for('new_info') }}">Add new information</a></li>
-    <li><a href="{{ url_for('index') }}">back</a></li>
-</ul>
-
+        <!-- Info -->
+        <div class="container">
+            <div class="row mt-5 mb-2">
+                <div class="col-lg-6 text-center">
+                    <h3>Don’t Play with your Health. Get Checked.</h3>
+                    <hr class="heading-hr mx-auto text-center">
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-lg-6">
+                    <p class="section-para">
+                        <strong>1 in 7 women will be diagnosed with breast cancer in their lifetime.</strong> Mammograms are the 
+                        best way to find breast cancer early, when it is easier to treat, and before it is big 
+                        enough to feel or cause symptoms.
+                    </p>
+                    <p class="section-para">
+                        Currently there is not sufficient knowledge on the causes of breast cancer, therefore, early detection of the disease 
+                        remains the cornerstone of breast cancer control. When breast cancer is detected early, and if adequate 
+                        diagnosis and treatment are available, there is a good chance that breast cancer can be cured. If 
+                        detected late, however, curative treatment is often no longer an option.
+                    </p>
+                    <p class="section-para">
+                        The majority of deaths occur in low- and middle-income families, where most women with breast cancer are diagnosed in late stages due mainly to lack of awareness on early detection and barriers to health services.
+                    </p>
+                </div>
+                <div class="col-lg-6 img-block">
+                    <img class="img-fluid awareness-img mx-auto" src="{{ url_for('static', filename='img/mammogram.jpg') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+    <!-- Symptoms and Signs -->
+        <div class="container">
+            <div class="row mt-5 mb-2">
+                <div class="col-lg-12 text-center">
+                    <h3>What Are The Symptoms and Risk Factors?</h3>
+                    <hr class="heading-hr mx-auto">
+                </div>
+            </div>
+            <div class="row">
+                <p class="intro-para lead mt-3">
+                    The earlier breast cancer is diagnosed, the better the chance of successful treatment. 
+                    It’s important to check your breasts regularly, and see your doctor if you notice a change. <br>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-lg-6">
+                    <h5>Symptoms:</h5>
+                    <p class="section-para">There are different symptoms of breast cancer, and some people have no symptoms at all. 
+                        Symptoms can include:
+                    </p>
+                    <ul class="section-para">
+                        <li>
+                            Any change in the size or the shape of the breast.
+                        </li>
+                        <li>
+                            Pain in any area of the breast.
+                        </li>
+                        <li>
+                            Nipple discharge other than breast milk (including blood).
+                        </li>
+                        <li>
+                            A new lump in the breast or underarm.
+                        </li> 
+                    </ul>
+                    <p class="section-para">If you have any signs that worry you, see your doctor right away.</p>
+                    <h5>Risk Factors:</h5>
+                    <ul class="section-para">
+                        <li>Being a woman</li>
+                        <li>Being older. Most breast cancers are found in women who are 50 years or older</li>
+                        <li>Having changes in your BRCA1 or BRCA2 genes</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid awareness-img mx-auto" src="{{ url_for('static', filename='img/breast_check.jpg') }}" alt="Cancer aware young woman looking herself in a mirror while doing breast self-examination at home">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breast Cancer in Men -->
+    <section>
+        <div class="container bg-story">
+            <div class="row mt-5 mb-2">
+                <div class="col-lg-12 text-center">
+                    <h3>Breast Cancer in Men.</h3>
+                    <hr class="heading-hr mx-auto">
+                </div>
+            </div>
+            <div class="row">
+                <p class="intro-para lead mt-3">
+                    Breast cancer is most often found in women, but men can get breast cancer too. 
+                    About 1 out of every 100 breast cancers diagnosed is found in a man.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Risk Factors and Prevention -->
+    <section>
+        <div class="container">
+            <div class="row mt-5 mb-2">
+                <div class="col-lg-12 text-center">
+                    <h3>Risk Factors and Prevention.</h3>
+                    <hr class="heading-hr mx-auto">
+                </div>
+            </div>
+            <div class="row">
+                <p class="intro-para lead mt-3">
+                    Not all cases of breast cancer can be prevented, but some can. Certain risk factors for breast cancer, 
+                    such as genetics, are inherent to an individual and cannot be changed. Others are related to a person’s 
+                    lifestyle.
+                </p>
+            </div>
+        </div>
+    </section>
 {% endblock %}
