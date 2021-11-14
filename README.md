@@ -230,3 +230,37 @@ Once above steps have been followed the website can be deployed. Please find the
 
 **Note**<br>
 *It is important NOT to set `debug=True` when deploying the website.*
+
+# Credits
+
+## Code
+
+## Media
+### Images
+
+#### Home page images
+- Hero image from [Shutterstock](https://www.shutterstock.com/image-photo/group-smiling-ladies-pink-ribbons-cheering-680520391)
+- White Banner with PRO-LIFE Awareness Realistic Ribbon from [Shutterstock](https://www.shutterstock.com/image-vector/white-banner-prolife-awareness-realistic-ribbon-1091915720)
+- Group of women wearing pink tops and ribbons for breast cancer on white background from [Shutterstock](https://www.shutterstock.com/image-photo/group-women-wearing-pink-tops-ribbons-145467715)
+ - Photo by Ono Kosuki from [Pexels](https://www.pexels.com/photo/positive-black-woman-reading-text-message-on-smartphone-6000094/)
+
+#### Awareness page images
+- Hero image from [Shutterstock](https://www.shutterstock.com/image-photo/female-doctor-pink-ribbon-cancer-concept-436570036)
+
+#### News page images
+- Hero image from [Shutterstock](https://www.shutterstock.com/image-photo/focused-worried-couple-paying-bills-online-1038126691)
+### Icons
+- Icons were sourced from [Font Awesome](https://fontawesome.com/)
+
+## Content
+Below website was used for a general layout inspiration:
+
+The text was adapted from 
+**TBA**
+
+# Acknowledgements
+
+# Disclaimer
+The information provided on this website is for educational purposes only.
+
+> [Back to Top](#table-of-contents) 
