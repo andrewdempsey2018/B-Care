@@ -114,10 +114,17 @@ html, body {
     justify-content: center;
 }
 
-.awareness-img {
+.awareness-img-1 {
     display: block;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.awareness-img-2 {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 2rem;
 }
 
 /* Share Story section on homepage*/
