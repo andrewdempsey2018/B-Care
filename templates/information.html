@@ -35,8 +35,8 @@
         <!-- Info -->
         <div class="container">
             <div class="row mt-5 mb-2">
-                <div class="col-lg-6 text-center">
-                    <h3>Don’t Play with your Health. Get Checked.</h3>
+                <div class="col-lg-12 text-center">
+                    <h1 class="text-center">Don’t Play with your Health. Get Checked.</h1>
                     <hr class="heading-hr mx-auto text-center">
                 </div>
             </div>
@@ -57,8 +57,8 @@
                         The majority of deaths occur in low- and middle-income families, where most women with breast cancer are diagnosed in late stages due mainly to lack of awareness on early detection and barriers to health services.
                     </p>
                 </div>
-                <div class="col-lg-6 img-block">
-                    <img class="img-fluid awareness-img mx-auto" src="{{ url_for('static', filename='img/mammogram.jpg') }}" alt="">
+                <div class="col-lg-6 img-block pt-2 pb-5">
+                    <img class="img-fluid awareness-img-1 mx-auto" src="{{ url_for('static', filename='img/mammogram.jpg') }}" alt="">
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
         <div class="container">
             <div class="row mt-5 mb-2">
                 <div class="col-lg-12 text-center">
-                    <h3>What Are The Symptoms and Risk Factors?</h3>
+                    <h2>What Are The Symptoms and Risk Factors?</h2>
                     <hr class="heading-hr mx-auto">
                 </div>
             </div>
@@ -81,8 +81,11 @@
         </div>
         <div class="container">
             <div class="row pt-4">
+                <div class="col-lg-6 img-block">
+                    <img class="img-fluid awareness-img-2 mx-auto pb-3" src="{{ url_for('static', filename='img/breast_check.jpg') }}" alt="Cancer aware young woman looking herself in a mirror while doing breast self-examination at home">
+                </div>
                 <div class="col-lg-6">
-                    <h5>Symptoms:</h5>
+                    <h4 class="pb-1">Symptoms:</h4>
                     <p class="section-para">There are different symptoms of breast cancer, and some people have no symptoms at all. 
                         Symptoms can include:
                     </p>
@@ -101,25 +104,22 @@
                         </li> 
                     </ul>
                     <p class="section-para">If you have any signs that worry you, see your doctor right away.</p>
-                    <h5>Risk Factors:</h5>
-                    <ul class="section-para">
+                    <h4 class="pb-1">Risk Factors:</h4>
+                    <ul class="section-para pb-4">
                         <li>Being a woman</li>
                         <li>Being older. Most breast cancers are found in women who are 50 years or older</li>
                         <li>Having changes in your BRCA1 or BRCA2 genes</li>
                     </ul>
                 </div>
-                <div class="col-lg-6">
-                    <img class="img-fluid awareness-img mx-auto" src="{{ url_for('static', filename='img/breast_check.jpg') }}" alt="Cancer aware young woman looking herself in a mirror while doing breast self-examination at home">
-                </div>
             </div>
         </div>
     </section>
     <!-- Breast Cancer in Men -->
-    <section>
-        <div class="container bg-story">
+    <section class="bg-story pt-2">
+        <div class="container">
             <div class="row mt-5 mb-2">
                 <div class="col-lg-12 text-center">
-                    <h3>Breast Cancer in Men.</h3>
+                    <h2>Breast Cancer in Men.</h2>
                     <hr class="heading-hr mx-auto">
                 </div>
             </div>
@@ -130,13 +130,46 @@
                 </p>
             </div>
         </div>
+        <div class="container">
+            <div class="row pb-2">
+                <div class="col-lg-12">
+                    <h4 class="pb-1">Symptoms:</h4>
+                    <p class="section-para">There are different symptoms of breast cancer, and some people have no symptoms at all. 
+                        Symptoms can include:
+                    </p>
+                    <ul class="section-para">
+                        <li>
+                            A lump or swelling in the breast.
+                        </li>
+                        <li>
+                            Redness or flaky skin in the breast.
+                        </li>
+                        <li>
+                            Irritation or dimpling of breast skin.
+                        </li>
+                        <li>
+                            Nipple discharge and pain in the nipple area.
+                        </li> 
+                    </ul>
+                    <p class="section-para">If you have any signs that worry you, see your doctor right away.</p>
+                    <h4 class="pb-1">Risk Factors:</h4>
+                    <ul class="section-para pb-2">
+                        <li>Getting older. The risk for breast cancer increases with age. Most breast cancers are found after age 50.</li>
+                        <li>Family history of breast cancer. A man’s risk for breast cancer is higher if a close family member has had breast cancer.</li>
+                        <li>Genetic mutations. Inherited changes (mutations) in certain genes, such as BRCA1 and BRCA2, increase breast cancer risk.</li>
+                        <li>Radiation therapy treatment. Men who had radiation therapy to the chest have a higher risk of getting breast cancer.</li>
+                        <li>Overweight and obesity. Older men who are overweight or have obesity have a higher risk of getting breast cancer than men at a normal weight.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- Risk Factors and Prevention -->
+    <!-- Prevention -->
     <section>
         <div class="container">
             <div class="row mt-5 mb-2">
                 <div class="col-lg-12 text-center">
-                    <h3>Risk Factors and Prevention.</h3>
+                    <h2>Prevention.</h2>
                     <hr class="heading-hr mx-auto">
                 </div>
             </div>
@@ -145,6 +178,32 @@
                     Not all cases of breast cancer can be prevented, but some can. Certain risk factors for breast cancer, 
                     such as genetics, are inherent to an individual and cannot be changed. Others are related to a person’s 
                     lifestyle.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Get Involved -->
+    <section class="bg-ss">
+        <div class="container">
+            <div class="row mt-5 mb-2">
+                <div class="col-lg-12 text-center mt-5 mb-2">
+                    <h2>Get Involved!</h2>
+                    <hr class="heading-hr mx-auto">
+                </div>
+            </div>
+            <div class="row pb-5">
+                <p class="intro-para lead mt-3">
+                    There are numerous events and charities you can donate your time or money to in 
+                    the fight against breast cancer. Tackling breast cancer requires an exorbitant 
+                    amount of time and funds – if you have extra of either you can become an incredible 
+                    weapon against breast cancer! Whether you volunteer or donate money, know your efforts 
+                    are appreciated and useful.
+                </p>
+                <p class="intro-para lead mt-3">
+                    The fight against breast cancer needs action and awareness galvanizes action. 
+                    Let’s inspire each other, let’s spread the message and let’s strive to make change. 
+                    Tell your story and tell others to get a mammogram. Breast cancer touches all of us in 
+                    some way so let’s unite together and promote awareness this month.
                 </p>
             </div>
         </div>
