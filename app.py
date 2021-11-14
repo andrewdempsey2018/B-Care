@@ -93,6 +93,10 @@ def edit_story():
 
 # ------------------------------------------ #
 
+@app.route("/news")
+def news():
+    return render_template("news.html")
+
 # ------------------------------------------ #
 @app.route("/speak")
 def speak():

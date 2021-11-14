@@ -34,16 +34,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item  pe-5 text-uppercase">
-                                <a class="nav-link active" aria-current="page" href="#">Breast Cancer Awareness</a>
+                                <a class="nav-link active" aria-current="page" href="{{ url_for('information') }}">Breast Cancer Awareness</a>
                             </li>
                             <li class="nav-item pe-5 text-uppercase">
-                                <a class="nav-link" href="#">Share a Story</a>
+                                <a class="nav-link" href="{{ url_for('stories') }}">Share a Story</a>
                             </li>
                             <li class="nav-item pe-5 text-uppercase">
-                                <a class="nav-link" href="#">Chat</a>
+                                <a class="nav-link" href="{{ url_for('chat') }}">Chat</a>
                             </li>
                             <li class="nav-item pe-5 text-uppercase">
-                                <a class="nav-link">News</a>
+                                <a class="nav-link" href="{{ url_for('news') }}">News</a>
                             </li>
                             <li class="d-none d-lg-block">
                                 <a href="#" id="admin-user">
