@@ -55,7 +55,7 @@ def stories():
 
 @app.route("/create_story")
 def create_story():
-    return render_template("create_story.html")
+    return render_template("create_story.html", user=session["user"])
 
 @app.route("/edit_story_page")
 def edit_story_page():
@@ -95,17 +95,17 @@ def edit_story():
 
 @app.route("/news")
 def news():
-    return render_template("news.html")
+    return render_template("news.html", user=session["user"])
 
 # ------------------------------------------ #
 @app.route("/speak")
 def speak():
-    return render_template("speak.html")
+    return render_template("speak.html", user=session["user"])
 # ------------------------------------------ #
 
 @app.route("/information")
 def information():
-    return render_template("information.html", allInfo = infoData.find())
+    return render_template("information.html", allInfo = infoData.find(), user=session["user"])
 
 @app.route("/edit_info_page")
 def edit_info_page():
@@ -143,7 +143,7 @@ def delete_info():
 
 @app.route("/login_page")
 def login_page():
-    return render_template("login.html")
+    return render_template("login.html", user=session["user"])
 
 @app.route("/logout")
 def logout():
@@ -171,7 +171,7 @@ def register():
 
 @app.route("/chat")
 def chat():
-    return render_template("chat.html")
+    return render_template("chat.html", user=session["user"])
 
 # server receives messages through the message 'route'
 # sends the message to ALL clients connected....
