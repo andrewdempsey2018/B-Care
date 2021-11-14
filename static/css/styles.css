@@ -241,9 +241,11 @@ html, body {
 
 /* Login Page */
 
+/*
 #login-main {
     background-color: #F8E3E8;
 }
+*/
 
 #login-console {
     height: 50vh;
@@ -393,6 +395,11 @@ a:link {
 
 .para-center {
     padding-top: 3rem;
+}
+
+/*Login page*/
+#login-block {
+    min-height: 90vh;
 }
 
 /* Media Queries */
