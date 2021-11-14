@@ -76,7 +76,19 @@ The wireframes were created in [Figma](https://www.figma.com/)
 
 Wireframes created at the start of the project for desktop and mobile can be viewed on the below links:
 
-TBA
+Desktop Wireframes | Mobile Wireframes
+------------------ | ----------------
+[Homepage](readme/wireframes/desktop_home.png) | [Homepage](readme/wireframes/) 
+[Awareness](readme/wireframes/) | [Awareness](readme/wireframes/) 
+[Stories](readme/wireframes/desktop_story.png) | [Stories](readme/wireframes/) 
+[Create Story](readme/wireframes/) | [Create Story](readme/wireframes/) 
+[Chat](readme/wireframes/chat.png) | [Chat](readme/wireframes/chat.png)
+[News](readme/wireframes/desktop_news.png) | [News](readme/wireframes/)
+[Add Article](readme/wireframes/) | [Add Article](readme/wireframes/)
+[Update Article](readme/wireframes/) | [Update Article](readme/wireframes/)
+[Admin Log In](readme/wireframes/)   | [Admin Log In](readme/wireframes/)
+
+There are some modifications made in the design then planned under the initial wireframes.
 
 ## Design
 ### Color Scheme
