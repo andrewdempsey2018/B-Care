@@ -224,6 +224,65 @@ html, body {
     height: 40rem;
 }
 
+/* Login Page */
+
+#login-main {
+    background-color: #F8E3E8;
+}
+
+#login-console {
+    height: 50vh;
+    padding-top: 6vh;
+    width: 240px;
+    margin: auto;
+}
+
+.login-input-div {
+    margin-bottom: 8px;
+}
+
+.login-input-div input {
+    width: 100%;
+}
+
+.login-input-div label {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#login-button {
+    margin-top: 10px;
+}
+
+.button1 {
+    border-radius: 10%;
+    background-color: #7ECDDA;
+    color: #000000;
+    border: 1px solid #7ECDDA;
+}
+
+.button1:hover {
+    color: #ebebeb;
+}
+  
+.text-left {
+    text-align: left;
+}
+
+form span {
+    font-family: 'Roboto', sans-serif;
+}
+
+#login-button button {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+
+#login-h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 /* Footer */
 footer {
     background-color: #4A8493;
@@ -249,6 +308,13 @@ a:link {
 }
 
 /* Media Queries */
+
+/* Display on small devices */
+@media only screen and (min-width: 350px) {
+    #login-console {
+        width: 330px;
+    }
+}
 /* Display on tablet devices */  
 
 @media only screen 
