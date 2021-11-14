@@ -1,29 +1,35 @@
 <!-- must import socket.io itself (seperate from Flask-socketIO -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.min.js"
-    integrity="sha512-2ho+gY0H62N4Z9oxD422L2ZYXiOMq9l+Aub1QNz4Z4UDOtDVxz4vk6O6R3Hqqc9Y7qSvZFl7cy3+eZ/ITnUrLA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+integrity="sha512-2ho+gY0H62N4Z9oxD422L2ZYXiOMq9l+Aub1QNz4Z4UDOtDVxz4vk6O6R3Hqqc9Y7qSvZFl7cy3+eZ/ITnUrLA=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 {% extends 'base.html' %}
 
 {% block content %}
 
-<h1>Never be afraid to speak</h1>
-<div id="main_container" class="d-flex p-2">
-    <div class="alert alert-primary overflow-auto w-50" style="height: 200px" id="message_area" role="alert">
-    </div>
-    <div class="form-group">
-        <input type="text" id="username" name="username" placeholder="Enter a username">
-    </div>
-    <div>
-        <textarea type="text" id="messageField" name="messageField" placeholder="Enter your message"></textarea>
-    </div>
-    <div>
-        <input type="submit" id="sendButton" value="Send">
+<div id="main_container">
+    <div id="chat-console">
+        <div>
+            <h1 id="chat-h1">You are not alone</h1>
+        </div>
+        <div id="message-area-div">
+            <div class="alert alert-primary overflow-auto" id="message_area" role="alert"></div>
+        <div class="form-group">
+            <input type="text" id="username" name="username" placeholder="Enter a username" class="nice-forms">
+        </div>
+        <div>
+            <textarea type="text" id="messageField" name="messageField" placeholder="Enter your message" class="nice-forms"></textarea>
+        </div>
+        <div>
+            <input type="submit" id="sendButton" value="Send" class="button1 btn-lg zoom-effect">
+        </div>
     </div>
 </div>
 
 <br>
-<a href="{{ url_for('index') }}">[back]</a>
+<div>
+    <input type="submit" id="backButton" value="Back" class="button1 btn-lg zoom-effect" href="{{ url_for('index') }}">
+</div>
 
 <script src="../static/js/chat.js"></script>
 
