@@ -23,14 +23,13 @@ html, body {
     height: 60px;
 }
 
-#admin-user {
-    padding-left: 8rem;
-    padding-top: 0.4rem;
+
+.admin-user-mobile {
     color: #000000;
 }
 
-#admin-user-mobile {
-    color: #000000;
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #b3e0e8 !important;
 }
 
 /* Hero image */
@@ -298,6 +297,79 @@ form span {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Chat Style */
+
+#main_container {
+    text-align: center;
+    background-image: url(/static/img/country_bras.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#chat-h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #F8E3E8;
+}
+
+#message_area {
+    margin: auto;
+    width: 490px;
+    height: 300px;
+    width: 90%;
+}
+
+#username {
+    display: inline-block;
+    margin-top: 15px;
+    width: 150px;
+}
+
+#messageField {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+#chat-console {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)
+    );
+    width: 100%;
+    border-radius: 10%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#backButton {
+    background-color: #F8E3E8;
+    border: none;
+}
+
+#backButton:hover {
+    color: #7ECDDA;
+}
+
+.nice-forms {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #2d9fd9;
+     width: 250px;
+     height: 30px;
+     padding-left: 10px;
+    }
+    
+.nice-forms:focus {
+     outline: none;
+     border: 2px solid #a0d18c;
+}
+
 
 /* Footer */
 footer {
@@ -326,9 +398,22 @@ a:link {
 /* Media Queries */
 
 /* Display on small devices */
-@media only screen and (min-width: 350px) {
-    #login-console {
-        width: 330px;
+
+@media only screen and (min-width: 395px) {
+    #chat-console { 
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    #chat-console { 
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #chat-console { 
+        width: 520px;
     }
 }
 /* Display on tablet devices */  
