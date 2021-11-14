@@ -4,16 +4,19 @@
 
 <h1>Login</h1>
 
-<form action="#" method="#">
-    <label for="title">Name</label>
-    <input type="text" id="name" name="name">
-    <label for="text">Password</label>
+<form action="{{ url_for('index') }}" method="POST">
+    <label for="title">username</label>
+    <input type="text" id="username" name="username">
+    <label for="text">password</label>
     <input type="password" id="password" name="password">
     <button type="submit">Login</button>
+    </div>
 </form>
 
-<a href="{{ url_for('index') }}">back</a>
+</form>
 
-<img src="../static/img/test_deleteme.png" alt="testdeleteme">
+{% with message = get_flashed_messages() %}
+<h3>{{ message }}</h3>
+{% endwith %}
 
 {% endblock %}

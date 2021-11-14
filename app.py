@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_socketio import SocketIO
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -23,14 +23,35 @@ mongo = PyMongo(app)
 # information held in 'info' collection
 storyData = mongo.db.stories
 infoData = mongo.db.info
+newsData = mongo.db.news
+userData = mongo.db.users
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def index():
-    return render_template("index.html", latestStory = storyData.find_one())
+    if request.method == "POST":
+    
+        existing_user = userData.find_one({"username": request.form.get("username")})
+        if(existing_user):
+            user = request.form.get("username")
+            if(existing_user["password"] == request.form.get("password")):
+                session["user"] = user
+                return render_template("index.html", latestStory = storyData.find_one(), user=user)
+            else:
+                flash("Incorrect password")
+                return render_template("login.html")
+        else:
+            flash("No user account with this name exists")
+            return render_template("login.html")
+    else:
+        if(session.get('user')):
+            return render_template("index.html", latestStory = storyData.find_one(), user=session["user"])
+        else:
+            session["user"] = "guest"
+            return render_template("index.html", latestStory = storyData.find_one(), user=session["user"])
 
 @app.route("/stories")
 def stories():
-    return render_template("stories.html", stories = storyData.find())
+    return render_template("stories.html", stories = storyData.find(), user=session["user"])
 
 @app.route("/create_story")
 def create_story():
@@ -116,9 +137,31 @@ def delete_info():
 
 # ------------------------------------------ #
 
-@app.route("/login")
-def login():
+@app.route("/login_page")
+def login_page():
     return render_template("login.html")
+
+@app.route("/logout")
+def logout():
+    session.pop("user")
+    session['user'] = "guest"
+    return redirect(url_for("index"))
+
+@app.route("/admin")
+def admin():
+    return render_template("admin.html", users=userData.find())
+
+@app.route("/register_page")
+def register_page():
+    return render_template("register.html")
+
+@app.route("/register", methods=["POST"])
+def register():
+    users = userData
+    users.insert_one(request.form.to_dict())
+    flash("Created user: ")
+    flash(request.form.to_dict())
+    return redirect(url_for('register_page'))
 
 # ------------------------------------------ #
 
