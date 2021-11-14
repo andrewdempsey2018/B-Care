@@ -23,14 +23,13 @@ html, body {
     height: 60px;
 }
 
-#admin-user {
-    padding-left: 8rem;
-    padding-top: 0.4rem;
+
+.admin-user-mobile {
     color: #000000;
 }
 
-#admin-user-mobile {
-    color: #000000;
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #b3e0e8 !important;
 }
 
 /* Hero image */
