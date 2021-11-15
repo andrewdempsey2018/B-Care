@@ -38,10 +38,12 @@ def index():
                 return render_template("index.html", latestStory = storyData.find_one(), user=user, news = newsData.find())
             else:
                 flash("Incorrect password")
-                return render_template("login.html")
+                session["user"] = "guest"
+                return render_template("login.html", user=session["user"])
         else:
             flash("No user account with this name exists")
-            return render_template("login.html")
+            session["user"] = "guest"
+            return render_template("login.html", user=session["user"])
     else:
         if(session.get('user')):
             return render_template("index.html", latestStory = storyData.find_one(), user=session["user"], news = newsData.find())
