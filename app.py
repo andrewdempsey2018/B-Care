@@ -93,9 +93,17 @@ def edit_story():
 
 # ------------------------------------------ #
 
+# a page for viewing a single story on its own
+@app.route("/news_full")
+def news_full():
+    newsId = request.args.get('newsId', None)
+    return render_template("news_full.html", article=newsData.find_one({ '_id': ObjectId(newsId) }))
+
+# ------------------------------------------ #
+
 @app.route("/news")
 def news():
-    return render_template("news.html", user=session["user"])
+    return render_template("news.html", user=session["user"], news = newsData.find())
 
 # ------------------------------------------ #
 @app.route("/speak")

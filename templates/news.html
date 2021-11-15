@@ -28,7 +28,8 @@
         <div class="row">
             <div class="col-12">
                 <p class="font-italic lead pt-3">
-                    Looking for the latest news? You've come to the right place! B-Care team is always on the hunt for meaningful topics about women and men health.
+                    Looking for the latest news? You've come to the right place! B-Care team is always on the hunt for
+                    meaningful topics about women and men health.
                 </p>
             </div>
             </ul>
@@ -36,50 +37,54 @@
     </div>
     <div class="container">
         <div class="row mt-5">
-            
-                <div class="col-lg-4 col-md-6 mb-5 justify-content-center d-flex">
-                    <article class="article-post mx-auto">
-                        <figure class="article">
-                            <div class="article-overlay">
-                                <a href="#">
-                                    <img src="{{ url_for('static', filename='img/healthy_food.jpg') }}" 
-                                        class="card-img-top img-fluid" alt="article image">
-                                </a>
+
+            {% for article in news %}
+            <div class="col-lg-4 col-md-6 mb-5 justify-content-center d-flex">
+                <article class="article-post mx-auto">
+                    <figure class="article">
+                        <div class="article-overlay">
+                            <a href="#">
+                                <img src={{article.image1}}
+                                    class="card-img-top img-fluid" alt="article image">
+                            </a>
+                        </div>
+                    </figure>
+                    <div class="article-content">
+                        <div class="article-header">
+                            <h5 class="article-card-title">
+                                <a href="">{{article.title}}</a>
+                            </h5>
+                            <div class="article-meta text-muted">
+                                {{article.credit}}
                             </div>
-                        </figure>
-                        <div class="article-content">
-                            <div class="article-header">
-                                <h5 class="article-card-title">
-                                    <a href=""></a>
-                                </h5>
-                                <div class="article-meta text-muted">
-                                    
-                                </div>
-                            </div>
-                            <div class="article-overview article-card-text">
-                                <p>
-                                    
-                                </p>
-                            </div>
-                            <div class="article-footer">
-                                <div class="row">
-                                    <div class="col-6 text-left footer-link">
-                                        <span>
-                                            <a href="#" class="article-link">
-                                                Read more &#8594;
-                                            </a>
-                                        </span>
-                                    </div>
+                        </div>
+                        <div class="article-overview article-card-text">
+                            <p>
+                                {{article.intro}}
+                            </p>
+                        </div>
+                        <div class="article-footer">
+                            <div class="row">
+                                <div class="col-6 text-left footer-link">
+                                    <span>
+                                        <a href="#" >
+                                            <a href="{{ url_for('news_full', newsId=article._id) }}" class="article-link">View in full</a>
+                                            Read more &#8594;
+                                        </a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                    </article>
-                </div>
-                
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+
         </div>
     </div>
 </section>
 
+<!--
 <a href="#">[edit]</a>
 <a href="#">[delete]</a>
 
@@ -87,5 +92,6 @@
     <li><a href="#">Add new information</a></li>
     <li><a href="{{ url_for('index') }}">back</a></li>
 </ul>
+-->
 
 {% endblock %}

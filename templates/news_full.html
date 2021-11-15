@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>view news story in full</h1>
+
+<h3>{{article.title}}</h3>
+<h4>{{article.credit}}</h4>
+<img src="{{article.image2}}" alt="breast cancer image">
+<h4>{{article.intro}}</h4>
+<p>{{article.paragraph_1}}</p>
+<p>{{article.paragraph_2}}</p>
+<p>{{article.paragraph_3}}</p>
+
+<a href="{{ url_for('news') }}">[back]</a>
+
+{% endblock %}
