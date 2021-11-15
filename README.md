@@ -110,12 +110,10 @@ Desktop Wireframes | Mobile Wireframes
 [Homepage](readme/wireframes/desktop_home.png) | [Homepage](readme/wireframes/mobile_home.png) 
 [Awareness](readme/wireframes/desktop_bca.png) | [Awareness](readme/wireframes/) 
 [Stories](readme/wireframes/desktop_story.png) | [Stories](readme/wireframes/) 
-[Create Story](readme/wireframes/) | [Create Story](readme/wireframes/) 
+[Create Story](readme/wireframes/) | [Create Story](readme/wireframes/mobile_story.png) 
 [Chat](readme/wireframes/chat.png) | [Chat](readme/wireframes/chat.png)
-[News](readme/wireframes/desktop_news.png) | [News](readme/wireframes/)
-[Add Article](readme/wireframes/) | [Add Article](readme/wireframes/)
-[Update Article](readme/wireframes/) | [Update Article](readme/wireframes/)
-[Admin Log In](readme/wireframes/)   | [Admin Log In](readme/wireframes/)
+[News](readme/wireframes/desktop_news.png) | [News](readme/wireframes/mobile_news.png)
+[Admin Log In](readme/wireframes/desktop_login.png)   | [Admin Log In](readme/wireframes/desktop_login.png)
 
 There are some modifications made in the design then planned under the initial wireframes.
 
@@ -174,6 +172,29 @@ Metallic Seaweed (#4A8493) will be used only for footer section and it combines 
     - if a user navigates to a page which does not exist or if they do not have permission to access, they will be directed to a 404 error page
     - if there are an internal problems with the server, a 500 error page will appear
 
+**How we implented chat functionality**:
+
+The clients fire a method emit() every time a user types a message. The emit() method takes two arguments: the users text and an additional argument and pass them to the server. The additional argument is simply a specific string that the server is listening for (very similar to a Flask route). Upon receiving this string, the server itself fires an emit() method. This in turn is being listened for by the client. Upon receiving it, the client will update the UI by injecting the message area with the new message.
+
+Procfile
+The Procfile contains the following command:
+web: gunicorn -k gevent -w 1 app:app
+web: tells Heroku to expect external HTTP traffic
+
+gunicorn -k run guncorn server with the -k argument (meaning that we will use a worker class with gunicorn) A worker class operates in its own thread separate from our app. In this case, the worker 'gevent' will deal with incoming and outgoing messages.
+
+gevent -w 1 specify gevent as our worker class. The -w 1 argument specifies that we want to use one worker in this instance. Because of a limitation with gunicorn, we cannot specify any more than 1 worker. There are other options to using gevent detailed in the Flask-SocketIO documentation.
+
+app:app the first 'app' refers to our app.py file whilst the second 'app' refers to the actual instance of our app we create at runtime.
+
+app.py:
+Passes the app instance into a socket for use on the server. The socketIO 'on()' decorator functions just like a standard Flask route - when the server detects a string (in this case 'message') it will trigger the handle_message() method. The handle_message() method 'emits' a string to all connected clients. The emit() method sends messages to all connected clients and is used here for simplicity. More specific recepients can easily be targeted.
+
+chat.js:
+Creates a socket for use on the client. Takes the form fields and sends them to the server upon user click. Listens for messages from the server and updates the message display area on the client upon receiving messages.
+
+chat.html:
+This page grabs socketIO from a CDN. It displays the form fields the user will use for their username and message input. It implements the above script.js
 ## Future Implementation
 - Back to top arrow button 
 - Pagination on Share a Story page
@@ -237,7 +258,7 @@ There are two types of users that this website is designed for:
 
 # Testing
 
-Manual tests were carried out across all user stories and features.
+Manual tests were carried out across all user goals and features.
 
 # Code Validation
 
@@ -246,19 +267,6 @@ Manual tests were carried out across all user stories and features.
 - [JSHint](https://jshint.com/) was used for JavaScript code validation was used for validation of JavaScript.
 - [PEP8 Online](http://pep8online.com/) was used for Python PEP8 compliance.
 
-## [W3C Markup Validation Service](https://validator.w3.org/) - Markup Validation
-
-### Home Page (`index.html`)
-
-<h2 align="center"><img src="readme-files/testing/validation_markup_home.jpg" alt="Markup Validation" target="_blank" width="60%" height="60%"></h2>
-
-## [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - CSS Validation
-
-## [JSHint](https://jshint.com/) - JavaScript Validation
-
-## [PEP8 Online](http://pep8online.com/) - Python PEP8 Compliant
-
-`app.py` file was passed through the [PEP8](http://pep8online.com/) validator and the results were all found to be PEP8 Compliant
 
 # Functionality Testing
 A comprehensive testing was executed. Further elaborated in more details below:
