@@ -30,13 +30,16 @@
                     <p class="font-italic section-para">
                         <strong>B-Care</strong> was founded with the main purpose to reduce the stigma associated
                         with the breast cancer for both women and men. Our main purpose is to provide a resource that
-                        will encourage people to share their stories and feelings about the disease with the ultimate aim 
+                        will encourage people to share their stories and feelings about the disease with the ultimate
+                        aim
                         of building communities of support.
                     </p>
                     <p class="font-italic section-para">
                         The facts remain that while women and men of any age can be diagnosed with breast cancer,
-                        most women diagnosed with breast cancer are over the age of 50, but younger women and men can also get breast cancer.
-                        About 1 in 8 women are diagnosed with breast cancer during their lifetime. There's a good chance of recovery if it's 
+                        most women diagnosed with breast cancer are over the age of 50, but younger women and men can
+                        also get breast cancer.
+                        About 1 in 8 women are diagnosed with breast cancer during their lifetime. There's a good chance
+                        of recovery if it's
                         detected at an early stage.
                     </p>
                 </div>
@@ -61,17 +64,19 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-sm-12 text-center">
-                <img src="{{ url_for('static', filename='img/share_story_transparent.png') }}" alt="Group of women wearing pink tops and ribbons for breast cancer" class="img-fluid" id="story-img">
+                <img src="{{ url_for('static', filename='img/share_story_transparent.png') }}"
+                    alt="Group of women wearing pink tops and ribbons for breast cancer" class="img-fluid"
+                    id="story-img">
             </div>
             <div class="col-lg-6 col-sm-12 para-center">
                 <p class="section-para">
-                    We believe nobody should be afraid to share their experience of breast cancer, 
+                    We believe nobody should be afraid to share their experience of breast cancer,
                     nobody should suffer in silence. Share your story and help inspire others with your bravery.
                 </p>
                 <div class="row text-center mt-5">
                     <div class="col-12 mb-5">
-                        <a class="btn btn-md justify-content-center section-button text-uppercase" href="{{ url_for('stories') }}" 
-                            role="button" aria-label="explore about">
+                        <a class="btn btn-md justify-content-center section-button text-uppercase"
+                            href="{{ url_for('stories') }}" role="button" aria-label="explore about">
                             share your story
                         </a>
                     </div>
@@ -92,8 +97,8 @@
         <div class="row mt-5">
             <div class="col-lg-6 col-sm-12 para-center pt-3">
                 <p class="section-para">
-                    Join a live chat where you can connect with our expert volunteers. Many of our 
-                    volunteers are cancer survivors from all over the world, doctors and people with 
+                    Join a live chat where you can connect with our expert volunteers. Many of our
+                    volunteers are cancer survivors from all over the world, doctors and people with
                     abundance of knowledge on the subject.
                     <br>
                     <br>
@@ -102,12 +107,13 @@
                 </p>
             </div>
             <div class="col-lg-6 col-sm-12">
-                <img src="{{ url_for('static', filename='img/chat.jpg') }}" alt="Woman looking at the mobile phone" class="img-fluid p-2" id="chat-img">
+                <img src="{{ url_for('static', filename='img/chat.jpg') }}" alt="Woman looking at the mobile phone"
+                    class="img-fluid p-2" id="chat-img">
             </div>
             <div class="row text-center my-5">
                 <div>
-                    <a class="btn btn-md justify-content-center section-button text-uppercase" href="{{ url_for('chat') }}" 
-                        role="button" aria-label="explore about">
+                    <a class="btn btn-md justify-content-center section-button text-uppercase"
+                        href="{{ url_for('chat') }}" role="button" aria-label="explore about">
                         live chat
                     </a>
                 </div>
@@ -125,37 +131,39 @@
         <hr class="heading-hr mx-auto">
     </div>
     <div class="container my-5">
-        <div class="row">
-            <div class="col-lg-6">
+        <div class="row mt-5">
+            {% for article in news %}
+            <div class="col-lg-4 col-md-6 mb-5 justify-content-center d-flex">
                 <article class="article-post mx-auto">
                     <figure class="article">
                         <div class="article-overlay">
                             <a href="#">
-                                <img src="{{ url_for('static', filename='img/healthy_food.jpg') }}" 
-                                    class="card-img-top img-fluid" alt="article image">
+                                <img src={{article.image1}} class="card-img-top img-fluid" alt="article image">
                             </a>
                         </div>
                     </figure>
                     <div class="article-content">
                         <div class="article-header">
                             <h5 class="article-card-title">
-                                <a href="">Breast cancer prevention: How to reduce your risk</a>
+                                <a href="{{ url_for('news_full', newsId=article._id) }}"
+                                    class="article-link">{{article.title}}</a>
                             </h5>
                             <div class="article-meta text-muted">
-                                by Mayo Clinic Staff
+                                {{article.credit}}
                             </div>
                         </div>
                         <div class="article-overview article-card-text">
                             <p>
-                                Breast cancer prevention starts with healthy habits - such as staying physically active.
+                                {{article.intro}}
                             </p>
                         </div>
                         <div class="article-footer">
                             <div class="row">
                                 <div class="col-6 text-left footer-link">
                                     <span>
-                                        <a href="#" class="article-link">
-                                            Read more &#8594;
+                                        <a href="#">
+                                            <a href="{{ url_for('news_full', newsId=article._id) }}"
+                                                class="article-link">View in full</a>
                                         </a>
                                     </span>
                                 </div>
@@ -164,47 +172,8 @@
                     </div>
                 </article>
             </div>
-
-            <div class="col-lg-6">
-                <article class="article-post mx-auto">
-                    <figure class="article">
-                        <div class="article-overlay">
-                            <a href="#">
-                                <img src="{{ url_for('static', filename='img/healthy_food.jpg') }}" 
-                                    class="card-img-top img-fluid" alt="article image">
-                            </a>
-                        </div>
-                    </figure>
-                    <div class="article-content">
-                        <div class="article-header">
-                            <h5 class="article-card-title">
-                                <a href="">Breast cancer prevention: How to reduce your risk</a>
-                            </h5>
-                            <div class="article-meta text-muted">
-                                by Mayo Clinic Staff
-                            </div>
-                        </div>
-                        <div class="article-overview article-card-text">
-                            <p>
-                                Breast cancer prevention starts with healthy habits - such as staying physically active.
-                            </p>
-                        </div>
-                        <div class="article-footer">
-                            <div class="row">
-                                <div class="col-6 text-left footer-link">
-                                    <span>
-                                        <a href="#" class="article-link">
-                                            Read more &#8594;
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            {% endfor %}
         </div>
-    </div>
 </section>
 
 {% endblock %}

@@ -35,7 +35,7 @@ def index():
             user = request.form.get("username")
             if(existing_user["password"] == request.form.get("password")):
                 session["user"] = user
-                return render_template("index.html", latestStory = storyData.find_one(), user=user)
+                return render_template("index.html", latestStory = storyData.find_one(), user=user, news = newsData.find())
             else:
                 flash("Incorrect password")
                 return render_template("login.html")
@@ -44,10 +44,10 @@ def index():
             return render_template("login.html")
     else:
         if(session.get('user')):
-            return render_template("index.html", latestStory = storyData.find_one(), user=session["user"])
+            return render_template("index.html", latestStory = storyData.find_one(), user=session["user"], news = newsData.find())
         else:
             session["user"] = "guest"
-            return render_template("index.html", latestStory = storyData.find_one(), user=session["user"])
+            return render_template("index.html", latestStory = storyData.find_one(), user=session["user"], news = newsData.find())
 
 @app.route("/stories")
 def stories():
