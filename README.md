@@ -17,7 +17,6 @@ Mockup responsive image was created with [Techsini](https://techsini.com/).
 2. [User Experience UX](#user-experience-ux)
     - [Strategy](#strategy)
         - [Project Goals](#project-goals)
-        - [User Stories](#user-stories)
     - [Scope](#scope)
     - [Structure](#structure)
     - [Skeleton](#skeleton)
@@ -30,11 +29,11 @@ Mockup responsive image was created with [Techsini](https://techsini.com/).
     - [Future Implementation](#future-implementation)
 4. [Technologies](#technologies)
 5. [Testing](#testing)
-6. [Version Control](#version-control)
-7. [Deployment](#deployment)
-8. [Credits](#credits)
-9. [Acknowledgements](#acknowledgements)
-10. [Disclaimer](#disclaimer)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
+8. [Acknowledgements](#acknowledgements)
+9. [Disclaimer](#disclaimer)
+10. [Team](#team)
 
 </details>
 
@@ -77,10 +76,6 @@ password: 1234
 - To be able to create admin account and approve / delete user stories.
 - Provide a fully secure, easy to use and engaging website.
 - Attractive and good quality UI design.
-
-## User Stories
-
-TBA
 
 ## Scope
 
@@ -187,11 +182,8 @@ Metallic Seaweed (#4A8493) will be used only for footer section and it combines 
 
 # User Types and permissions
 There are two types of users that this website is designed for:
-## Visitor
-
-## Administrator
-
-### Access permission
+- Visitors
+- Administrator
 
 ## Technologies
 ## Languages
@@ -288,6 +280,11 @@ The results were consistent, the website is platform-cross compatible and respon
 
 Several bugs were encountered during the coding process:
 
+**Connecting to MongoDB**
+- Some team members could not connect to MongoDB database to received SSL error. 
+- The issue was caused by MongoDB TSL certificate fail 
+- Resolution was found on the following link: https://www.mongodb.com/community/forums/t/keep-getting-serverselectiontimeouterror/126190/11
+
 # Performance Testing
 
 Performance was tested using [Lighthouse](https://developers.google.com/web/tools/lighthouse) which is an-open source, automated tool for improving the quality of web pages.
@@ -295,8 +292,6 @@ Performance was tested using [Lighthouse](https://developers.google.com/web/tool
 The results are somewhat lower for Performance and  Accessibility. For accessibility primarily due to heading elements not being in a sequentially-descending order (h3 & h4).
 
 The main issues for Performance, primarily on mobile devices is due to the type and size of the images, unused CSS and JS CDNs. The performance results are overall satisfying as the website is heavy loaded with the content.
-
-## Version Control
 
 # Deployment
 ## Local Installation
@@ -379,11 +374,8 @@ We would like to thank our fantastic facilitator Sean Young for his advise and g
 The information provided on this website is for educational purposes only.
 
 # Team
-
 ## Personal paragraphs
-
 ### Andrew Dempsey
-
 Hi, my name is Andrew and I have really enjoyed my IT Labs / WIT Hackathon experience. Thank you to IT Labs and Code Institute for the opportunity. I have learned so much about coding during this event and I have had the chance to use some new technologies which I can now add to my toolbelt. The event has also given me the opportunity to learn things I never knew about breast cancer and how this difficult disease can be overcome. As always, most of all, this event has introduced me to new friends and contacts in the tech world. My teammates have been AWESOME, thank you :slightly_smiling_face: We are immensely proud of our achievement and hope that our app will be used to help many many people!
 
 ### Marina Pavlovic
