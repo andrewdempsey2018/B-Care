@@ -21,7 +21,8 @@ sendButton.addEventListener('click', e => {
    along with the text message to be displayed
    UI is then updated */
 socket.on('updateui', data => {
-    message_area.innerHTML += data + '<br>';
+    message_area.innerHTML =  '<br>' + data + message_area.innerHTML;
+    //message_area.innerHTML += data + '<br>';
 })
 
 /*Andrew's woman in tech... For my woman in tech I'd like to nominate Abi Harrison, 

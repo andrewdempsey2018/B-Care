@@ -1,7 +1,6 @@
 /* Styles here */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
-
 html {
     scroll-behavior: smooth;
     height: 100%;
@@ -13,6 +12,7 @@ html, body {
 }
 
 /* Navbar */
+
 .navbar-light .navbar-nav .nav-link {
     color: #000;
     font-family: 'Roboto', sans-serif;
@@ -23,7 +23,6 @@ html, body {
     height: 60px;
 }
 
-
 .admin-user-mobile {
     color: #000000;
 }
@@ -33,6 +32,7 @@ html, body {
 }
 
 /* Hero image */
+
 #home-header {
     background: url('/static/img/hero.jpg') no-repeat center;
     background-size: cover;
@@ -46,8 +46,8 @@ html, body {
     font-weight: 600;
     color: #000000;
     text-shadow: 0.07rem 0.06rem #fafafa;
-  }
-  
+}
+
 .sub-heading {
     color: #fafafa;
     text-shadow: 0.25rem 0.25rem 0.8rem #343a40;
@@ -62,7 +62,7 @@ html, body {
 .heading-hr {
     width: 20%;
     height: 0.3rem !important;
-    background-color:#56C3D4;
+    background-color: #56C3D4;
     opacity: 0.7;
 }
 
@@ -76,17 +76,18 @@ html, body {
     background-color: #56C3D4;
     color: #000000;
     font-family: 'Roboto', sans-serif;
-  }
-  
+}
+
 .section-button:hover, .section-button:active {
     background-color: #56C3D4;
     color: #fafafa;
     -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-            transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* Breast Cancer Awareness section on homepage */
+
 .page-background {
     background: url('/static/img/ribbon_adobespark.png') no-repeat center;
     background-size: cover;
@@ -96,6 +97,7 @@ html, body {
 }
 
 /* Awareness (Information) page */
+
 #awareness-header {
     background: url('/static/img/bca.jpg') no-repeat center;
     background-size: cover;
@@ -136,6 +138,7 @@ html, body {
 /*
 
 /* Share Story section on homepage*/
+
 .bg-story {
     background-color: #EAF4F5!important;
 }
@@ -145,6 +148,7 @@ html, body {
 }
 
 /* Share your Story template */
+
 .story-card {
     max-width: 18.75rem;
     background-color: #7ECDDA;
@@ -159,7 +163,7 @@ html, body {
 .zoom-effect:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
-        transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .bg-ss {
@@ -167,6 +171,7 @@ html, body {
 }
 
 /* News section on the homepage*/
+
 .bg-news {
     background-color: #F8E3E8!important;
 }
@@ -174,65 +179,66 @@ html, body {
 .post .article-header {
     margin-bottom: 0.94rem;
 }
-  
+
 .article-post {
     width: 85%;
     margin-bottom: 4rem;
 }
-  
+
 .article-post .article-content {
     -webkit-box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.15);
-            box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 0px 20px 1px rgba(0, 0, 0, 0.15);
     padding: 1.875rem;
     position: relative;
     background: #fff;
     margin-top: -4.68rem;
 }
-  
+
 .article-post .article-overlay {
     position: relative;
     left: 1.35rem;
     margin-bottom: 0;
 }
-  
+
 .article-post .article-overview p:last-of-type {
     margin-bottom: 0;
 }
-  
+
 .article-post .article-footer {
     border-top: 1px solid #ebebeb;
     padding-top: 0.94rem;
     margin-top: 1.25rem;
 }
-  
+
 .card-img-top {
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
-  
+
 .article-card-title a {
     color: #439B94;
 }
-  
-.footer-link > a {
+
+.footer-link>a {
     color: #56C3D4;
 }
-  
+
 .article-post .article-footer .footer-meta a i {
     font-size: 1rem;
     margin-left: 0.125rem;
 }
-  
+
 .article-link {
     color: #439B94;
 }
-  
+
 .article-link:hover {
     color: #2f7f79;
 }
 
 /* News page */
+
 #news-header {
     background: url('/static/img/news.jpg') no-repeat center;
     background-size: cover;
@@ -266,7 +272,6 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-
 #login-button {
     margin-top: 10px;
 }
@@ -281,7 +286,7 @@ html, body {
 .button1:hover {
     color: #ebebeb;
 }
-  
+
 .text-left {
     text-align: left;
 }
@@ -301,9 +306,32 @@ form span {
 
 /* Chat Style */
 
+/* scrollbar */
+
+.chatbox::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.chatbox::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.chatbox::-webkit-scrollbar-thumb {
+    background: rgb(230, 150, 161);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.chatbox::-webkit-scrollbar-thumb:hover {
+    background: rgb(207, 127, 138);
+}
+
 #main_container {
     text-align: center;
-    background-image: url(/static/img/country_bras.jpg);
+    background-image: url(/static/img/country_bras.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 50px;
@@ -337,10 +365,7 @@ form span {
 }
 
 #chat-console {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.4), 
-      rgba(0, 0, 0, 0.4)
-    );
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     width: 100%;
     border-radius: 10%;
     margin: auto;
@@ -360,31 +385,30 @@ form span {
 .nice-forms {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
-     border-radius: 20px;
-     border: 1px solid #2d9fd9;
-     width: 250px;
-     height: 30px;
-     padding-left: 10px;
-    }
-    
-.nice-forms:focus {
-     outline: none;
-     border: 2px solid #a0d18c;
+    border-radius: 20px;
+    border: 1px solid #2d9fd9;
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
 }
 
+.nice-forms:focus {
+    outline: none;
+    border: 2px solid #a0d18c;
+}
 
 /* Footer */
+
 footer {
     background-color: #4A8493;
     width: 100%;
 }
-  
-  #copyright {
+
+#copyright {
     background-color: rgba(0, 0, 0, 0.2);
 }
-  
-.footer-email a, 
-.footer-phone a {
+
+.footer-email a, .footer-phone a {
     color: #fafafa;
     text-decoration: underline;
 }
@@ -398,6 +422,7 @@ a:link {
 }
 
 /*Login page*/
+
 #login-block {
     min-height: 90vh;
 }
@@ -407,38 +432,33 @@ a:link {
 /* Display on small devices */
 
 @media only screen and (min-width: 395px) {
-    #chat-console { 
+    #chat-console {
         width: 90%;
     }
 }
 
 @media only screen and (min-width: 500px) {
-    #chat-console { 
+    #chat-console {
         width: 70%;
     }
 }
 
 @media only screen and (min-width: 700px) {
-    #chat-console { 
+    #chat-console {
         width: 520px;
     }
 }
-/* Display on tablet devices */  
 
-@media only screen 
-  and (min-width : 768px) 
-  and (max-width : 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+/* Display on tablet devices */
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
     #home-header {
         height: 40rem;
     }
-
     .main-heading {
         margin-top: 17rem;
         font-size: 2.4rem;
     }
-
     .page-background {
         height: 22rem;
         margin-top: -15rem;
@@ -447,35 +467,28 @@ a:link {
 }
 
 /* Display on large devices */
-@media screen 
-  and (min-width: 1024px) {
 
+@media screen and (min-width: 1024px) {
     .navbar {
         font-size: 1.2rem;
-      }
-    
+    }
     #home-header {
         height: 33rem;
     }
-
     .main-heading {
         margin-top: 14rem;
         font-size: 3rem;
         font-weight: 500;
-        
-      }
-
-      .section-heading-1 {
+    }
+    .section-heading-1 {
         font-size: 2.1rem;
         margin-top: 6rem;
     }
-
-      .page-background {
+    .page-background {
         height: 40rem;
         margin-top: -25rem;
         margin-left: -10rem;
     }
-
     .para-center {
         margin: auto;
         width: 50%;
@@ -485,13 +498,6 @@ a:link {
 }
 
 /* iPhone 5 only (portrait mode)
-resource: https://coderwall.com/p/mwvbea/media-queries-only-for-the-iphone-5-part-i */ 
+resource: https://coderwall.com/p/mwvbea/media-queries-only-for-the-iphone-5-part-i */
 
-@media only screen 
-  and (min-width: 320px) 
-  and (max-width: 568px)
-  and (-webkit-device-pixel-ratio: 2) 
-  and (min-aspect-ratio: 40/71) and (orientation:portrait) {
-
-
-}
+@media only screen and (min-width: 320px) and (max-width: 568px) and (-webkit-device-pixel-ratio: 2) and (min-aspect-ratio: 40/71) and (orientation:portrait) {}
