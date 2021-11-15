@@ -4,7 +4,7 @@
 
 <section class="bg-ss">
     <div class="container">
-        <div class="row">
+        <div class="row text-center">
             <h2 class="section-heading-1 text-uppercase">Share Your Story</h2>
         </div>
         <hr class="heading-hr mx-auto">
@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-12">
                 <p class="pt-3">
-                    We beleive nobody should be afraid to share their experience of breast cancer, nobody
+                    We believe nobody should be afraid to share their experience of breast cancer, nobody
                     should suffer in silence. Share your story here and help inspire others with your
                     bravery
                 </p>
@@ -21,7 +21,8 @@
             <ul class="list-unstyled">
                 <li>
                     <a href="{{ url_for('create_story') }}"
-                        class="btn btn-lg justify-content-center section-button">Share your story</a>
+                        class="btn btn-lg justify-content-center text-uppercase 
+                        section-button">Share your story</a>
                 </li>
             </ul>
         </div>
@@ -30,7 +31,7 @@
         <div class="row mt-5">
             {% for story in stories %}
             <div class="col-lg-4 col-md-6">
-                <div class="card story-card zoom-effect">
+                <div class="card story-card zoom-effect scroll">
                     <div class="card-img">
                         <!--generate image url using jinja. generate random number used to select a static image-->
                         {% set imgurl1 ="../static/img/face" %}
@@ -38,7 +39,7 @@
                         {% set imgurl2string = imgurl2int|string %}
                         {% set imgurl3 = ".png" %}
                         {% set fullurl = imgurl1 + imgurl2string + imgurl3 %}
-                        <img src="{{fullurl}}" alt="user image">
+                        <img src="{{fullurl}}" alt="user image" class="story-img img-fluid">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">{{ story.title }}</h4>
