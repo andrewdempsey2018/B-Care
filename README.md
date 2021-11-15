@@ -2,8 +2,6 @@
 
 *Developed and designed as part of **Women in Tech Hackathon***
 
-**[Please view the live project here](https://b-care-wit.herokuapp.com/)**
-
 <h2 align="center"><img src="readme/general/mockup.jpg" alt="mockup" target="_blank" width="90%" height="90%"></h2>
 
 Mockup responsive image was created with [Techsini](https://techsini.com/).
@@ -45,6 +43,22 @@ Mockup responsive image was created with [Techsini](https://techsini.com/).
 The project was created as part of part of **Women in Tech Hackathon** with **Code Institute**. The project is developed using Python, Flask, SocketIO, JavaScript, HTML, CSS, and Bootstrap framework.
 
 B-Care was founded with the main purpose to reduce the stigma associated with the breast cancer for both women and men. Our main purpose is to provide a resource that will encourage people to share their stories and feelings about the disease with the ultimate aim of building communities of support.
+
+**[Please view the live project here](https://b-care-wit.herokuapp.com/)**
+
+If you would like to test out our admin functionality, you may use these usernames:
+
+username: stefan <br>
+password: 1234
+
+username: janeg <br>
+password: 1234
+
+username: superjim <br>
+password: 1234
+
+username: judge <br>
+password: 1234
 
 # User Experience (UX)
 ## Strategy
@@ -157,6 +171,8 @@ Metallic Seaweed (#4A8493) will be used only for footer section and it combines 
 - Responsiveness
     - by using the mobile-first approach, the website will be built to be fully responsive
 
+- Share a Story functionality
+- Live Chat functionality
 - Registration option for admin user
 - Manage / Approve / Delete stories for admin user
 - 404 and 500 error pages
@@ -310,8 +326,21 @@ The website texts were adapted from:
 [Centers For Disease Control and Prevention](https://www.cdc.gov/cancer/breast/basic_info/prevention.htm) 
 [Breast Cancer Ireland](https://www.breastcancerireland.com/)
 # Acknowledgements
+We would like to thank our fantastic facilitator Sean Young for his advise and guidance.
 
 # Disclaimer
 The information provided on this website is for educational purposes only.
+
+# Team
+
+## Personal paragraphs
+
+### Andrew Dempsey
+
+Hi, my name is Andrew and I have really enjoyed my IT Labs / WIT Hackathon experience. Thank you to IT Labs and Code Institute for the opportunity. I have learned so much about coding during this event and I have had the chance to use some new technologies which I can now add to my toolbelt. The event has also given me the opportunity to learn things I never knew about breast cancer and how this difficult disease can be overcome. As always, most of all, this event has introduced me to new friends and contacts in the tech world. My teammates have been AWESOME, thank you :slightly_smiling_face: We are immensely proud of our achievement and hope that our app will be used to help many many people!
+
+### Marina Pavlovic
+
+### Jonah Parry Lloyd
 
 > [Back to Top](#table-of-contents) 
