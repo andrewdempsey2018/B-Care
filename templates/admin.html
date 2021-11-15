@@ -2,18 +2,38 @@
 
 {% block content %}
 
-<h1>Admin page</h1>
-<hr>
-{% for user in users %}
-
-<h4>username: {{user.username}}</h4>
-<h4>password: {{user.password}}</h4>
-<h4><a href="#">[edit]</a></h4>
-<h4><a href="#">[delete]</a></h4>
-<hr>
-
-{% endfor %}
-
+<section class="bg-ss">
+    <div class="container">
+        <div class="row">
+            <h2 class="section-heading-1 text-uppercase">Manage administrator accounts</h2>
+        </div>
+        <hr class="heading-hr mx-auto">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            {% for user in users %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card story-card zoom-effect">
+                    <div class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <h4>username: {{user.username}}</h4>
+                        <h4>password: {{user.password}}</h4>
+                        <a href="{{ url_for('delete_admin', userId=user._id) }}"
+                            class="btn btn-danger btn-sm justify-content-center section-button">Delete</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
 
 {% endblock %}

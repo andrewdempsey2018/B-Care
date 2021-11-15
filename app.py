@@ -111,6 +111,13 @@ def speak():
     return render_template("speak.html", user=session["user"])
 # ------------------------------------------ #
 
+@app.route("/delete_admin")
+def delete_admin():
+    userId=request.args.get("userId", None)
+    userData.remove({ "_id": ObjectId(userId) })
+    return redirect(url_for("admin"))
+# ------------------------------------------ #
+
 @app.route("/information")
 def information():
     return render_template("information.html", allInfo = infoData.find(), user=session["user"])
