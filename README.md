@@ -42,7 +42,9 @@ Mockup responsive image was created with [Techsini](https://techsini.com/).
 
 # Overview
 
-The project was created as part of part of **Women in Tech Hackathon** with **Code Institute**. The project is developed using Python,JavaScript, HTML, CSS, and Bootstrap framework.
+The project was created as part of part of **Women in Tech Hackathon** with **Code Institute**. The project is developed using Python, Flask, SocketIO, JavaScript, HTML, CSS, and Bootstrap framework.
+
+B-Care was founded with the main purpose to reduce the stigma associated with the breast cancer for both women and men. Our main purpose is to provide a resource that will encourage people to share their stories and feelings about the disease with the ultimate aim of building communities of support.
 
 # User Experience (UX)
 ## Strategy
@@ -50,14 +52,17 @@ The project was created as part of part of **Women in Tech Hackathon** with **Co
 
 **Users**
 - To navigate the website easily and understand its purpose.
-
-TBA
+- Attractive and good quality UI design.
+- Get useful information about breast cancer and the prevention tips.
+- To have an option to read and share personal stories.
+- To read insightful articles related to the breast cancer awareness.
 
 **Site Owner**
 - To be able to approve/delete stories as an admin user.
+- To have a live chat functionality.
+- To be able to create admin account and approve / delete user stories.
+- Provide a fully secure, easy to use and engaging website.
 - Attractive and good quality UI design.
-
-TBA
 
 ## User Stories
 
@@ -67,7 +72,8 @@ TBA
 
 The site will be fully responsive mobile first website. Many features will be available that allow the user to engage and find needed information fast and easy.
 
-The site consists of a homepage which gives an overview of the site purpose with a brief overview of the site purpose, share a story, chat and news sections respectively. Second page is Breast Cancer Awareness page which gives prevention and early detection tips.
+The site consists of a homepage which gives an overview of the site's purpose, and has sections of each page on the site.
+breast cancer awareness information, page share a story, chat and news sections respectively. Second page is Breast Cancer Awareness page which gives prevention and early detection tips.
 
 ## Structure
 
@@ -78,8 +84,8 @@ Wireframes created at the start of the project for desktop and mobile can be vie
 
 Desktop Wireframes | Mobile Wireframes
 ------------------ | ----------------
-[Homepage](readme/wireframes/desktop_home.png) | [Homepage](readme/wireframes/) 
-[Awareness](readme/wireframes/) | [Awareness](readme/wireframes/) 
+[Homepage](readme/wireframes/desktop_home.png) | [Homepage](readme/wireframes/mobile_home.png) 
+[Awareness](readme/wireframes/desktop_bca.png) | [Awareness](readme/wireframes/) 
 [Stories](readme/wireframes/desktop_story.png) | [Stories](readme/wireframes/) 
 [Create Story](readme/wireframes/) | [Create Story](readme/wireframes/) 
 [Chat](readme/wireframes/chat.png) | [Chat](readme/wireframes/chat.png)
@@ -265,11 +271,10 @@ Once above steps have been followed the website can be deployed. Please find the
 - Icons were sourced from [Font Awesome](https://fontawesome.com/)
 
 ## Content
-Below website was used for a general layout inspiration:
 
-The text was adapted from 
-**TBA**
-
+The website texts were adapted from: 
+[Centers For Disease Control and Prevention](https://www.cdc.gov/cancer/breast/basic_info/prevention.htm) 
+[Breast Cancer Ireland](https://www.breastcancerireland.com/)
 # Acknowledgements
 
 # Disclaimer
