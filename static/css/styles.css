@@ -313,18 +313,21 @@ form span {
 }
 
 /* Track */
+
 .chatbox::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
 }
 
 /* Handle */
+
 .chatbox::-webkit-scrollbar-thumb {
     background: rgb(230, 150, 161);
     border-radius: 10px;
 }
 
 /* Handle on hover */
+
 .chatbox::-webkit-scrollbar-thumb:hover {
     background: rgb(207, 127, 138);
 }
@@ -425,6 +428,16 @@ a:link {
 
 #login-block {
     min-height: 90vh;
+}
+
+/* Make elements bigger on mouse hover */
+
+.grow {
+    transition: all .1s ease-in-out;
+}
+
+.bigify:hover {
+    transform: scale(1.2);
 }
 
 /* Media Queries */

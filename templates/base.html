@@ -27,15 +27,15 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand d-md-flex" href="{{ url_for('index') }}">
+                    <a class="navbar-brand d-md-flex bigify grow" href="{{ url_for('index') }}">
                         <img src="{{ url_for('static', filename='img/logo_b_care.png') }}" alt="logo"
                             class="d-inline-block align-text-top" id="brand-logo" loading="lazy">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item text-uppercase pe-5">
-                                <a class="nav-link" aria-current="page"
-                                    href="{{ url_for('information') }}">Breast Cancer Awareness</a>
+                                <a class="nav-link" aria-current="page" href="{{ url_for('information') }}">Breast
+                                    Cancer Awareness</a>
                             </li>
                             <li class="nav-item text-uppercase pe-5">
                                 <a class="nav-link" href="{{ url_for('stories') }}">Share a Story</a>
@@ -48,20 +48,20 @@
                             </li>
                             <ul class="list-inline-item dropdown list-unstyled text-lg-right d-none d-lg-block ps-5">
                                 <li class="list-inline-item dropdown">
-                                    <a class="nav-link text-black" href="{{ url_for('login_page') }}" id="user-icon" data-bs-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link text-black" href="{{ url_for('login_page') }}" id="user-icon"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fas fa-user fa-lg icon"></i>
                                     </a>
                                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
 
-                                            {% if user!="guest" %}
-                                                <a class="dropdown-item" href="{{ url_for('register_page') }}">ADD AN ADMIN</a>
-                                                <a class="dropdown-item" href="{{ url_for('admin') }}">ADMIN PANEL</a>
-                                                <a class="dropdown-item" href="{{ url_for('logout') }}">ADMIN LOGOUT</a>
-                                            {% endif %}
-                                            {% if user =="guest" %}
-                                                <a class="dropdown-item" href="{{ url_for('login_page') }}">LOGIN</a>
-                                            {% endif %}
+                                        {% if user!="guest" %}
+                                        <a class="dropdown-item" href="{{ url_for('register_page') }}">ADD ADMIN</a>
+                                        <a class="dropdown-item" href="{{ url_for('admin') }}">MANAGE ADMINS</a>
+                                        <a class="dropdown-item" href="{{ url_for('logout') }}">LOGOUT</a>
+                                        {% endif %}
+                                        {% if user =="guest" %}
+                                        <a class="dropdown-item" href="{{ url_for('login_page') }}">LOGIN</a>
+                                        {% endif %}
                                     </div>
                                 </li>
                             </ul>
@@ -78,17 +78,17 @@
                             {% if user!="guest" %}
                             <li class="nav-item text-uppercase d-lg-none d-xxl-block">
                                 <a class="nav-link" href="{{ url_for('register_page') }}" class="admin-user-mobile">
-                                    Add an admin
+                                    Create admin
                                 </a>
                             </li>
                             <li class="nav-item text-uppercase d-lg-none d-xxl-block">
                                 <a class="nav-link" href="{{ url_for('admin') }}" class="admin-user-mobile">
-                                    Admin panel
+                                    Manage admins
                                 </a>
                             </li>
                             <li class="nav-item text-uppercase d-lg-none d-xxl-block">
                                 <a class="nav-link" href="{{ url_for('logout') }}" class="admin-user-mobile">
-                                    Admin logout
+                                    logout
                                 </a>
                             </li>
                             {% endif %}

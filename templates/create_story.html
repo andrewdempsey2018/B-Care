@@ -1,18 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>Create Story</h1>
-
-<form action="{{ url_for('publish_story') }}" method="POST">
-    <label for="title">Title</label>
-    <input type="text" id="title" name="title" placeholder="story title here">
-    <label for="text">Text</label>
-    <input type="text" id="text" name="text" placeholder="story text here">
-    <button type="submit">Tell your story</button>
+<!-- Login form - code source: Bootstrap5 -->
+<div class="container-fluid bg-ss">
+    <div class="row" id="login-block">
+        <div class="col-md-4 offset-md-4">
+            <div class="login-form bg-light mt-4 p-4">
+                <form action="{{ url_for('publish_story') }}" method="POST" class="row g-3">
+                    <h4>Share your inspirational story</h4>
+                    <div class="col-12">
+                        <label>Title</label>
+                        <input type="text" id="title" name="title" class="form-control"
+                            placeholder="add your title here">
+                    </div>
+                    <div class="col-12">
+                        <label>Your story</label>
+                        <textarea type="text" id="text" name="text" class="form-control"
+                            placeholder="type your story here"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn section-button float-end">Tell your story</button>
+                    </div>
+                </form>
+                <hr class="mt-4">
+            </div>
+        </div>
     </div>
-</form>
-
-</form>
+</div>
 
 {% endblock %}

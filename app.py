@@ -171,7 +171,6 @@ def register_page():
 def register():
     users = userData
     users.insert_one(request.form.to_dict())
-    flash("Created user: ")
     flash(request.form.to_dict())
     return redirect(url_for('register_page'))
 

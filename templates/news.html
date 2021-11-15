@@ -44,15 +44,15 @@
                     <figure class="article">
                         <div class="article-overlay">
                             <a href="#">
-                                <img src={{article.image1}}
-                                    class="card-img-top img-fluid" alt="article image">
+                                <img src={{article.image1}} class="card-img-top img-fluid" alt="article image">
                             </a>
                         </div>
                     </figure>
                     <div class="article-content">
                         <div class="article-header">
                             <h5 class="article-card-title">
-                                <a href="">{{article.title}}</a>
+                                <a href="{{ url_for('news_full', newsId=article._id) }}"
+                                    class="article-link">{{article.title}}</a>
                             </h5>
                             <div class="article-meta text-muted">
                                 {{article.credit}}
@@ -67,8 +67,9 @@
                             <div class="row">
                                 <div class="col-6 text-left footer-link">
                                     <span>
-                                        <a href="#" >
-                                            <a href="{{ url_for('news_full', newsId=article._id) }}" class="article-link">View in full</a>
+                                        <a href="#">
+                                            <a href="{{ url_for('news_full', newsId=article._id) }}"
+                                                class="article-link">View in full</a>
                                         </a>
                                     </span>
                                 </div>
