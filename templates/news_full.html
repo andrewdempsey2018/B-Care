@@ -2,14 +2,30 @@
 
 {% block content %}
 
-<h3>{{article.title}}</h3>
-<h4>{{article.credit}}</h4>
-<img src="{{article.image2}}" alt="breast cancer image">
-<h4>{{article.intro}}</h4>
-<p>{{article.paragraph_1}}</p>
-<p>{{article.paragraph_2}}</p>
-<p>{{article.paragraph_3}}</p>
-
-<a href="{{ url_for('news') }}">[back]</a>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center mt-5 mb-4">
+            <h3>{{article.title}}</h3>
+        </div>
+        <div>
+            <h5 class="text-muted text-center">{{article.credit}}</h5>
+        </div>
+    </div>
+    <div class="row text-center">
+        <img src="{{article.image2}}" alt="breast cancer image" class="img-fluid article-image">
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <p class="section-para">{{article.paragraph_1}}</p>
+            <p class="section-para">{{article.paragraph_2}}</p>
+            <p class="section-para">{{article.paragraph_3}}</p>
+        </div>
+    </div>
+    <div class="py-4">
+        <a class="btn section-button" href="{{ url_for('news') }}">BACK</a>
+    </div>
+</div>
 
 {% endblock %}
