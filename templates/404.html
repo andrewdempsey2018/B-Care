@@ -2,8 +2,21 @@
 
 {% block content %}
 
-<h1>404 Error</h1>
-
-<a href="{{ url_for('index') }}">[back]</a>
+<div class="container">
+    <div class="row" id="login-block">
+        <div class="col-12 text-center">
+            <h1>404 Error</h1>
+        </div>
+        <div>
+            <h3 class="my-5 error-sub-heading">
+                Looks like you took a wrong turn. <br>
+                Click below to get back to the home page.
+            </h3>
+            <a href="{{ url_for('index') }}" class="btn-lg button-primary border-0 rounded-1 text-uppercase my-2">
+                <i class="fas fa-home mr-1 text-uppercase"></i>&nbsp;Back&nbsp;Home
+            </a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
