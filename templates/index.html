@@ -27,16 +27,21 @@
             <hr class="heading-hr mx-auto">
             <div class="row pt-3">
                 <div class="text-center col-lg-12 mt-3 trail-p">
-                    <p class="font-italic section-p">
-                        <strong>B-Care</strong> 
-                        Lorem ipsum dolor sit amet, iriure aliquid ancillae id duo, facete copiosae ex has. Sea assum volumus atomorum ea, sit viderer invidunt reformidans ea. Eu graeci maiorum aliquando his. Duo in idque scriptorem, atqui complectitur per te. His utamur electram argumentum id, sit ex harum dictas habemus, vix an vide pertinacia rationibus. Sed modo dicat vitae in, ea alia vitae eum.
+                    <p class="font-italic section-para">
+                        <strong>B-Care</strong> was founded with the main purpose to reduce the stigma associated
+                        with the breast cancer for both women and men. Our main purpose is to provide a resource that
+                        will encourage people to share their stories and feelings about the disease with the ultimate aim 
+                        of building communities of support.
                     </p>
-                    <p class="font-italic section-p">
-                        Lorem ipsum dolor sit amet, iriure aliquid ancillae id duo, facete copiosae ex has. Sea assum volumus atomorum ea, sit viderer invidunt reformidans ea. Eu graeci maiorum aliquando his. Duo in idque scriptorem, atqui complectitur per te. His utamur electram argumentum id, sit ex harum dictas habemus, vix an vide pertinacia rationibus. Sed modo dicat vitae in, ea alia vitae eum.
+                    <p class="font-italic section-para">
+                        The facts remain that while women and men of any age can be diagnosed with breast cancer,
+                        most women diagnosed with breast cancer are over the age of 50, but younger women and men can also get breast cancer.
+                        About 1 in 8 women are diagnosed with breast cancer during their lifetime. There's a good chance of recovery if it's 
+                        detected at an early stage.
                     </p>
                 </div>
                 <div class="pt-5">
-                    <a href="" class="btn btn-lg justify-content-center section-button">
+                    <a href="{{ url_for('information') }}" class="btn btn-lg justify-content-center section-button">
                         FIND OUT MORE
                     </a>
                 </div>
@@ -59,8 +64,9 @@
                 <img src="{{ url_for('static', filename='img/share_story_transparent.png') }}" alt="Group of women wearing pink tops and ribbons for breast cancer" class="img-fluid" id="story-img">
             </div>
             <div class="col-lg-6 col-sm-12 para-center">
-                <p class="section-p">
-                    Lorem ipsum dolor sit amet, iriure aliquid ancillae id duo, facete copiosae ex has. Sea assum volumus atomorum ea, sit viderer invidunt reformidans ea. Eu graeci maiorum aliquando his. Duo in idque scriptorem, atqui complectitur per te. His utamur electram argumentum id, sit ex harum dictas habemus, vix an vide pertinacia rationibus. Sed modo dicat vitae in, ea alia vitae eum.
+                <p class="section-para">
+                    We believe nobody should be afraid to share their experience of breast cancer, 
+                    nobody should suffer in silence. Share your story and help inspire others with your bravery.
                 </p>
                 <div class="row text-center mt-5">
                     <div class="col-12 mb-5">
@@ -83,18 +89,24 @@
         <hr class="heading-hr mx-auto">
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-sm-12 para-center">
-                <p class="section-p">
-                    Lorem ipsum dolor sit amet, iriure aliquid ancillae id duo, facete copiosae ex has. Sea assum volumus atomorum ea, sit viderer invidunt reformidans ea. Eu graeci maiorum aliquando his. Duo in idque scriptorem, atqui complectitur per te. His utamur electram argumentum id, sit ex harum dictas habemus, vix an vide pertinacia rationibus. Sed modo dicat vitae in, ea alia vitae eum.
+        <div class="row mt-5">
+            <div class="col-lg-6 col-sm-12 para-center pt-3">
+                <p class="section-para">
+                    Join a live chat where you can connect with our expert volunteers. Many of our 
+                    volunteers are cancer survivors from all over the world, doctors and people with 
+                    abundance of knowledge on the subject.
+                    <br>
+                    <br>
+                    This might help you in getting the right information about the treatments, risks, prevention
+                    or join the chat if you just want to say hello.
                 </p>
             </div>
             <div class="col-lg-6 col-sm-12">
-                <img src="{{ url_for('static', filename='img/chat.jpg') }}" alt="Woman looking at the mobilephone" class="img-fluid p-2" id="chat-img">
+                <img src="{{ url_for('static', filename='img/chat.jpg') }}" alt="Woman looking at the mobile phone" class="img-fluid p-2" id="chat-img">
             </div>
             <div class="row text-center my-5">
                 <div>
-                    <a class="btn btn-md justify-content-center section-button text-uppercase" href="#" 
+                    <a class="btn btn-md justify-content-center section-button text-uppercase" href="{{ url_for('chat') }}" 
                         role="button" aria-label="explore about">
                         live chat
                     </a>
