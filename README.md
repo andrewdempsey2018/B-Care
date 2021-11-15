@@ -2,8 +2,6 @@
 
 *Developed and designed as part of **Women in Tech Hackathon***
 
-**[Please view the live project here](https://b-care-wit.herokuapp.com/)**
-
 <h2 align="center"><img src="readme/general/mockup.jpg" alt="mockup" target="_blank" width="90%" height="90%"></h2>
 
 Mockup responsive image was created with [Techsini](https://techsini.com/).
@@ -42,7 +40,25 @@ Mockup responsive image was created with [Techsini](https://techsini.com/).
 
 # Overview
 
-The project was created as part of part of **Women in Tech Hackathon** with **Code Institute**. The project is developed using Python,JavaScript, HTML, CSS, and Bootstrap framework.
+The project was created as part of part of **Women in Tech Hackathon** with **Code Institute**. The project is developed using Python, Flask, SocketIO, JavaScript, HTML, CSS, and Bootstrap framework.
+
+B-Care was founded with the main purpose to reduce the stigma associated with the breast cancer for both women and men. Our main purpose is to provide a resource that will encourage people to share their stories and feelings about the disease with the ultimate aim of building communities of support.
+
+**[Please view the live project here](https://b-care-wit.herokuapp.com/)**
+
+If you would like to test out our admin functionality, you may use these usernames:
+
+username: stefan <br>
+password: 1234
+
+username: janeg <br>
+password: 1234
+
+username: superjim <br>
+password: 1234
+
+username: judge <br>
+password: 1234
 
 # User Experience (UX)
 ## Strategy
@@ -50,14 +66,17 @@ The project was created as part of part of **Women in Tech Hackathon** with **Co
 
 **Users**
 - To navigate the website easily and understand its purpose.
-
-TBA
+- Attractive and good quality UI design.
+- Get useful information about breast cancer and the prevention tips.
+- To have an option to read and share personal stories.
+- To read insightful articles related to the breast cancer awareness.
 
 **Site Owner**
 - To be able to approve/delete stories as an admin user.
+- To have a live chat functionality.
+- To be able to create admin account and approve / delete user stories.
+- Provide a fully secure, easy to use and engaging website.
 - Attractive and good quality UI design.
-
-TBA
 
 ## User Stories
 
@@ -67,9 +86,24 @@ TBA
 
 The site will be fully responsive mobile first website. Many features will be available that allow the user to engage and find needed information fast and easy.
 
-The site consists of a homepage which gives an overview of the site purpose with a brief overview of the site purpose, share a story, chat and news sections respectively. Second page is Breast Cancer Awareness page which gives prevention and early detection tips.
+The site will consist of a homepage which gives an overview of the site's purpose, and consists of several sections - Breast Cancer Awareness, Share a Story, Live Chat, and News section respectively. 
+The Second page is Breast Cancer Awareness page which gives risk, prevention and early detection tips.
+Also the section with breast cancer in men was included. 
+
+Furthermore, the website will have a Share a Story page where users can read other's stories and add their personal stories as well. Also, there will be a Chat page where a user can send a chat message to one of B-Care expert volunteers. The News page will also be included where site users can read the latest news related to the breast cancer.
 
 ## Structure
+
+The website will be designed to be pleasing to the eye, consistent and user friendly.
+
+- Interaction Design
+    - Consistent design will be used throughout the website to maintain a good UX.
+    - The navigation with effective background images will make the website look elegant and attractive.
+
+- Information Architecture (IA)
+    - The project was conceptualized as a website divided in five main pages. This structure was used because it is simple and familiar to the site visitors and it is sufficient for all user goals.
+    - Short paragraphs providing the relevant information will be used. This approach was selected to provide enough information, yet not to overwhelm.
+    - The content is organized and categorized by importance from top to bottom and left to right
 
 ## Skeleton
 The wireframes were created in [Figma](https://www.figma.com/)
@@ -78,8 +112,8 @@ Wireframes created at the start of the project for desktop and mobile can be vie
 
 Desktop Wireframes | Mobile Wireframes
 ------------------ | ----------------
-[Homepage](readme/wireframes/desktop_home.png) | [Homepage](readme/wireframes/) 
-[Awareness](readme/wireframes/) | [Awareness](readme/wireframes/) 
+[Homepage](readme/wireframes/desktop_home.png) | [Homepage](readme/wireframes/mobile_home.png) 
+[Awareness](readme/wireframes/desktop_bca.png) | [Awareness](readme/wireframes/) 
 [Stories](readme/wireframes/desktop_story.png) | [Stories](readme/wireframes/) 
 [Create Story](readme/wireframes/) | [Create Story](readme/wireframes/) 
 [Chat](readme/wireframes/chat.png) | [Chat](readme/wireframes/chat.png)
@@ -123,11 +157,33 @@ Metallic Seaweed (#4A8493) will be used only for footer section and it combines 
 
 ## Imagery
 ### Logo
-
+[Canva](https://www.canva.com/) was used to design a custom logo and favicon.
 # Features
 ## Existing Features
+-  Navigation menu
+    - responsive on all devices
+    - hamburger menu on smaller devices
+
+- Footer
+    - the footer is standard across all pages on the website
+    - it consist of brand's purpose, navigation links (visible only on large devices), and contact details - copyright information at the very bottom
+
+- Responsiveness
+    - by using the mobile-first approach, the website will be built to be fully responsive
+
+- Share a Story functionality
+- Live Chat functionality
+- Registration option for admin user
+- Manage / Approve / Delete stories for admin user
+- 404 and 500 error pages
+    - if a user navigates to a page which does not exist or if they do not have permission to access, they will be directed to a 404 error page
+    - if there are an internal problems with the server, a 500 error page will appear
 
 ## Future Implementation
+- Back to top arrow button 
+- Pagination on Share a Story page
+- Animate on scroll library (AOS)
+- Functionality for a user to add / update / delete news articles
 
 # User Types and permissions
 There are two types of users that this website is designed for:
@@ -265,14 +321,26 @@ Once above steps have been followed the website can be deployed. Please find the
 - Icons were sourced from [Font Awesome](https://fontawesome.com/)
 
 ## Content
-Below website was used for a general layout inspiration:
 
-The text was adapted from 
-**TBA**
-
+The website texts were adapted from: 
+[Centers For Disease Control and Prevention](https://www.cdc.gov/cancer/breast/basic_info/prevention.htm) 
+[Breast Cancer Ireland](https://www.breastcancerireland.com/)
 # Acknowledgements
+We would like to thank our fantastic facilitator Sean Young for his advise and guidance.
 
 # Disclaimer
 The information provided on this website is for educational purposes only.
+
+# Team
+
+## Personal paragraphs
+
+### Andrew Dempsey
+
+Hi, my name is Andrew and I have really enjoyed my IT Labs / WIT Hackathon experience. Thank you to IT Labs and Code Institute for the opportunity. I have learned so much about coding during this event and I have had the chance to use some new technologies which I can now add to my toolbelt. The event has also given me the opportunity to learn things I never knew about breast cancer and how this difficult disease can be overcome. As always, most of all, this event has introduced me to new friends and contacts in the tech world. My teammates have been AWESOME, thank you :slightly_smiling_face: We are immensely proud of our achievement and hope that our app will be used to help many many people!
+
+### Marina Pavlovic
+
+### Jonah Parry Lloyd
 
 > [Back to Top](#table-of-contents) 
