@@ -72,10 +72,24 @@ TBA
 
 The site will be fully responsive mobile first website. Many features will be available that allow the user to engage and find needed information fast and easy.
 
-The site consists of a homepage which gives an overview of the site's purpose, and has sections of each page on the site.
-breast cancer awareness information, page share a story, chat and news sections respectively. Second page is Breast Cancer Awareness page which gives prevention and early detection tips.
+The site will consist of a homepage which gives an overview of the site's purpose, and consists of several sections - Breast Cancer Awareness, Share a Story, Live Chat, and News section respectively. 
+The Second page is Breast Cancer Awareness page which gives risk, prevention and early detection tips.
+Also the section with breast cancer in men was included. 
+
+Furthermore, the website will have a Share a Story page where users can read other's stories and add their personal stories as well. Also, there will be a Chat page where a user can send a chat message to one of B-Care expert volunteers. The News page will also be included where site users can read the latest news related to the breast cancer.
 
 ## Structure
+
+The website will be designed to be pleasing to the eye, consistent and user friendly.
+
+- Interaction Design
+    - Consistent design will be used throughout the website to maintain a good UX.
+    - The navigation with effective background images will make the website look elegant and attractive.
+
+- Information Architecture (IA)
+    - The project was conceptualized as a website divided in five main pages. This structure was used because it is simple and familiar to the site visitors and it is sufficient for all user goals.
+    - Short paragraphs providing the relevant information will be used. This approach was selected to provide enough information, yet not to overwhelm.
+    - The content is organized and categorized by importance from top to bottom and left to right
 
 ## Skeleton
 The wireframes were created in [Figma](https://www.figma.com/)
@@ -129,11 +143,31 @@ Metallic Seaweed (#4A8493) will be used only for footer section and it combines 
 
 ## Imagery
 ### Logo
-
+[Canva](https://www.canva.com/) was used to design a custom logo and favicon.
 # Features
 ## Existing Features
+-  Navigation menu
+    - responsive on all devices
+    - hamburger menu on smaller devices
+
+- Footer
+    - the footer is standard across all pages on the website
+    - it consist of brand's purpose, navigation links (visible only on large devices), and contact details - copyright information at the very bottom
+
+- Responsiveness
+    - by using the mobile-first approach, the website will be built to be fully responsive
+
+- Registration option for admin user
+- Manage / Approve / Delete stories for admin user
+- 404 and 500 error pages
+    - if a user navigates to a page which does not exist or if they do not have permission to access, they will be directed to a 404 error page
+    - if there are an internal problems with the server, a 500 error page will appear
 
 ## Future Implementation
+- Back to top arrow button 
+- Pagination on Share a Story page
+- Animate on scroll library (AOS)
+- Functionality for a user to add / update / delete news articles
 
 # User Types and permissions
 There are two types of users that this website is designed for:
