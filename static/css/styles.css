@@ -485,29 +485,43 @@ a:link {
     .navbar {
         font-size: 1.2rem;
     }
+
+    .admin-menu {
+        display: none;
+    }
+
     #home-header {
         height: 33rem;
     }
+
     .main-heading {
         margin-top: 14rem;
         font-size: 3rem;
         font-weight: 500;
     }
+
     .section-heading-1 {
         font-size: 2.1rem;
         margin-top: 6rem;
     }
+
     .page-background {
         height: 40rem;
         margin-top: -25rem;
         margin-left: -10rem;
     }
+
     .para-center {
         margin: auto;
         width: 50%;
         padding: 0.625rem;
         padding-top: 0;
     }
+
+    #news-header {
+        height: 33rem;
+    }
+    
 }
 
 /* iPhone 5 only (portrait mode)
