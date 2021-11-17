@@ -53,17 +53,26 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                                     {% if user!="guest" %}
-                                        <a class="dropdown-item" href="{{ url_for('register_page') }}">ADD ADMIN</a>
-                                        <a class="dropdown-item" href="{{ url_for('admin') }}">MANAGE ADMINS</a>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <a class="dropdown-item" href="{{ url_for('logout') }}">LOGOUT</a>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('register_page') }}">ADD ADMIN</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('admin') }}">MANAGE ADMINS</a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('logout') }}">LOGOUT</a>
+                                        </li>
                                     {% endif %}
                                     {% if user =="guest" %}
-                                        <a class="dropdown-item" href="{{ url_for('login_page') }}">LOGIN</a>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('login_page') }}">LOGIN</a>
+                                        </li>
                                     {% endif %}
                                 </ul>
                             </li>
-
                             <li>
                                 <hr class="d-lg-none">
                             </li>
