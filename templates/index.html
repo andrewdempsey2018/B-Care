@@ -122,7 +122,6 @@
     </div>
 </section>
 <!-- News section -->
-<!-- Data from the database -->
 <section class="mb-5 bg-news">
     <div class="container">
         <div class="row">
@@ -133,47 +132,47 @@
     <div class="container my-5">
         <div class="row mt-5">
             {% for article in news %}
-            <div class="col-lg-4 col-md-6 mb-5 justify-content-center d-flex">
-                <article class="article-post mx-auto">
-                    <figure class="article">
-                        <div class="article-overlay">
-                            <a href="#">
-                                <img src={{article.image1}} class="card-img-top img-fluid" alt="article image">
-                            </a>
-                        </div>
-                    </figure>
-                    <div class="article-content">
-                        <div class="article-header">
-                            <h5 class="article-card-title">
-                                <a href="{{ url_for('news_full', newsId=article._id) }}"
-                                    class="article-link">{{article.title}}</a>
-                            </h5>
-                            <div class="article-meta text-muted">
-                                {{article.credit}}
+                <div class="col-lg-4 col-md-6 mb-5 justify-content-center d-flex">
+                    <article class="article-post mx-auto">
+                        <figure class="article">
+                            <div class="article-overlay">
+                                <a href="#">
+                                    <img src={{article.image1}} class="card-img-top img-fluid" alt="article image">
+                                </a>
                             </div>
-                        </div>
-                        <div class="article-overview article-card-text">
-                            <p>
-                                {{article.intro}}
-                            </p>
-                        </div>
-                        <div class="article-footer">
-                            <div class="row">
-                                <div class="col-6 text-left footer-link">
-                                    <span>
-                                        <a href="#">
-                                            <a href="{{ url_for('news_full', newsId=article._id) }}"
-                                                class="article-link">View in full</a>
-                                        </a>
-                                    </span>
+                        </figure>
+                        <div class="article-content">
+                            <div class="article-header">
+                                <h5 class="article-card-title">
+                                    <a href="{{ url_for('news_full', newsId=article._id) }}"
+                                        class="article-link">{{article.title}}</a>
+                                </h5>
+                                <div class="article-meta text-muted">
+                                    {{article.credit}}
+                                </div>
+                            </div>
+                            <div class="article-overview article-card-text">
+                                <p>
+                                    {{article.intro}}
+                                </p>
+                            </div>
+                            <div class="article-footer">
+                                <div class="row">
+                                    <div class="col-6 text-left footer-link">
+                                        <span>
+                                            <a href="{{ url_for('news_full', newsId=article._id) }}" class="article-link">
+                                                Read more
+                                            </a>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </article>
-            </div>
+                    </article>
+                </div>
             {% endfor %}
         </div>
+    </div>
 </section>
 
 {% endblock %}

@@ -46,50 +46,59 @@
                             <li class="nav-item text-uppercase pe-5">
                                 <a class="nav-link" href="{{ url_for('news') }}">News</a>
                             </li>
-                            <ul class="list-inline-item dropdown list-unstyled text-lg-right d-none d-lg-block ps-5">
-                                <li class="list-inline-item dropdown">
-                                    <a class="nav-link text-black" href="{{ url_for('login_page') }}" id="user-icon"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-user fa-lg icon"></i>
-                                    </a>
-                                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                        {% if user!="guest" %}
+                            <li class="nav-item dropdown list-unstyled text-lg-right d-none d-lg-block ps-5">
+                                <a class="nav-link text-black" href="{{ url_for('login_page') }}" id="navbarScrollingDropdown" 
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user fa-lg icon"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    {% if user!="guest" %}
+                                        <li>
                                             <a class="dropdown-item" href="{{ url_for('register_page') }}">ADD ADMIN</a>
+                                        </li>
+                                        <li>
                                             <a class="dropdown-item" href="{{ url_for('admin') }}">MANAGE ADMINS</a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li>
                                             <a class="dropdown-item" href="{{ url_for('logout') }}">LOGOUT</a>
-                                        {% endif %}
-                                        {% if user =="guest" %}
+                                        </li>
+                                    {% endif %}
+                                    {% if user =="guest" %}
+                                        <li>
                                             <a class="dropdown-item" href="{{ url_for('login_page') }}">LOGIN</a>
-                                        {% endif %}
-                                    </div>
-                                </li>
-                            </ul>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </li>
                             <li>
                                 <hr class="d-lg-none">
                             </li>
                             {% if user=="guest" %}
-                            <li class="nav-item text-uppercase d-lg-none d-xxl-block">
-                                <a class="nav-link" href="{{ url_for('login_page') }}" class="admin-user-mobile">
-                                    Login
-                                </a>
-                            </li>
+                                <li class="nav-item text-uppercase d-lg-none">
+                                    <a class="nav-link admin-user-mobile" href="{{ url_for('login_page') }}">
+                                        Login
+                                    </a>
+                                </li>
                             {% endif %}
                             {% if user!="guest" %}
-                            <li class="nav-item text-uppercase d-lg-none d-xxl-block">
-                                <a class="nav-link" href="{{ url_for('register_page') }}" class="admin-user-mobile">
-                                    Create admin
-                                </a>
-                            </li>
-                            <li class="nav-item text-uppercase d-lg-block d-xl-none">
-                                <a class="nav-link" href="{{ url_for('admin') }}" class="admin-user-mobile">
-                                    Manage admins
-                                </a>
-                            </li>
-                            <li class="nav-item text-uppercase d-lg-block d-xl-none">
-                                <a class="nav-link" href="{{ url_for('logout') }}" class="admin-user-mobile">
-                                    logout
-                                </a>
-                            </li>
+                                <li class="nav-item text-uppercase d-lg-none">
+                                    <a class="nav-link admin-user-mobile" href="{{ url_for('register_page') }}">
+                                        Create admin
+                                    </a>
+                                </li>
+                                <li class="nav-item text-uppercase d-lg-none">
+                                    <a class="nav-link admin-user-mobile" href="{{ url_for('admin') }}">
+                                        Manage admins
+                                    </a>
+                                </li>
+                                <li class="nav-item text-uppercase d-lg-none">
+                                    <a class="nav-link admin-user-mobile" href="{{ url_for('logout') }}">
+                                        logout
+                                    </a>
+                                </li>
                             {% endif %}
                         </ul>
                     </div>
