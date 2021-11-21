@@ -14,9 +14,12 @@
                 <h1 id="chat-h1">You are not alone</h1>
             </div>
             <div id="message-area-div">
+                <div>
+                    <p id="user_list">Users online: </p>
+                </div>
                 <div class="alert alert-primary overflow-auto chatbox" id="message_area" role="alert"></div>
                 <div class="form-group">
-                    <input type="text" id="username" name="username" value="Anonymous" class="nice-forms">
+                    <input type="text" id="username" name="username" value="{{user}}" class="nice-forms">
                 </div>
                 <div>
                     <textarea type="text" id="messageField" name="messageField" placeholder="Enter your message"
@@ -27,10 +30,13 @@
                 </div>
             </div>
         </div>
+
+        
+
 </section>
 
 
 
-    <script src="../static/js/chat.js"></script>
+<script src="../static/js/chat.js"></script>
 
-    {% endblock %}
+{% endblock %}

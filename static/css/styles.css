@@ -322,6 +322,10 @@ form span {
 /* Chat Style */
 /* scrollbar */
 
+#user_list {
+    color: #ffffff;
+}
+
 .chatbox::-webkit-scrollbar {
     width: 10px;
 }
