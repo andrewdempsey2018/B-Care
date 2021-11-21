@@ -10,6 +10,8 @@ let userlist_area = document.getElementById('user_list');
 
 let ping = new Audio('../static/audio/ping.wav');
 
+console.log(username.value);
+
 /* user clicks submit button, socket sends the message to the server */
 sendButton.addEventListener('click', e => {
     e.preventDefault();
@@ -39,6 +41,12 @@ socket.on('update_userlist', data => {
         userlist_area.innerHTML += (user + " ");
     });
 })
+
+/* make sure the user is removed from the database even if
+they directly close the browser window or tab by using onbeforeunload 
+window.onbeforeunload = () => {
+    socket.emit('client_tab_close', username.value);
+}*/
 
 /* Send a message with enter key */
 window.addEventListener('keydown', (key) => {

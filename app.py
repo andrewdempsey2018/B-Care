@@ -279,13 +279,9 @@ def test_disconnect():
 
 # ------------------------------------------ #
 
-
-
-
 # if os tells app to run in debug mode, socket io
 # will be turned off. For production, socket IO
 # will be on
-
 
 if __name__ == '__main__':
     if app.debug:
