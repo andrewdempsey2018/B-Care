@@ -6,6 +6,8 @@ from werkzeug import debug
 import gevent
 import os
 
+live_userlist = ""
+
 if os.path.exists("env.py"):
     import env
 
@@ -25,6 +27,7 @@ storyData = mongo.db.stories
 infoData = mongo.db.info
 newsData = mongo.db.news
 userData = mongo.db.users
+chatUsers = mongo.db.chat_users
 
 if os.environ.get("DEBUG") == 'True':
     app.debug = True
@@ -248,10 +251,37 @@ def handle_message(data):
 
 # ------------------------------------------ #
 
+@socketio.on('connect')
+def test_connect():
+
+    # user connects to chat room, add name to database
+    chatUsers.insert_one({"name": session["user"]})
+
+    # get all usernames stored in the database
+    clients=chatUsers.find()
+
+    # parse all usernames into a list so that we may send it to the clients local chat.js
+    # so that it may be used to updaate their user interface showing a complete list of connected clients
+    client_names=[]
+    for client in clients:
+        client_names.append(client['name'])
+
+    # send the list of client names to socket io for transmission to all clients using the 'update_userlist' socket io route
+    socketio.emit('update_userlist', client_names)
+    print('Client connected')
+
+# remove remove this particular client name from the database when they leave the chatroom
+@socketio.on('disconnect')
+def test_disconnect():
+    chatUsers.delete_one({"name": session["user"]})
+    socketio.emit('update_userlist', chatUsers.distinct('name'))
+    print('Client disconnected')
+
+# ------------------------------------------ #
+
 # if os tells app to run in debug mode, socket io
 # will be turned off. For production, socket IO
 # will be on
-
 
 if __name__ == '__main__':
     if app.debug:

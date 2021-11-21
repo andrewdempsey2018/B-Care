@@ -6,8 +6,11 @@ let username = document.getElementById('username');
 let sendButton = document.getElementById('sendButton');
 
 let message_area = document.getElementById('message_area');
+let userlist_area = document.getElementById('user_list');
 
 let ping = new Audio('../static/audio/ping.wav');
+
+console.log(username.value);
 
 /* user clicks submit button, socket sends the message to the server */
 sendButton.addEventListener('click', e => {
@@ -27,6 +30,23 @@ socket.on('updateui', data => {
     //message_area.innerHTML += data + '<br>';
     ping.play();
 })
+
+/* User connects to the chat room 
+a list of all usernames from the database is passed to this
+function and iterated over. The UI element that displays usernames is
+updated with the list of names*/
+socket.on('update_userlist', data => {
+    userlist_area.innerHTML = "Users online: "
+    data.forEach(user => {
+        userlist_area.innerHTML += (user + " ");
+    });
+})
+
+/* make sure the user is removed from the database even if
+they directly close the browser window or tab by using onbeforeunload 
+window.onbeforeunload = () => {
+    socket.emit('client_tab_close', username.value);
+}*/
 
 /* Send a message with enter key */
 window.addEventListener('keydown', (key) => {
