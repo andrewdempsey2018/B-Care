@@ -5,6 +5,7 @@ from bson.objectid import ObjectId
 from werkzeug import debug
 import gevent
 import os
+from werkzeug.utils import secure_filename
 
 live_userlist = ""
 
@@ -34,6 +35,9 @@ if os.environ.get("DEBUG") == 'True':
 else:
     app.debug = False
 
+# picture file types allowed for upload
+ALLOWED_EXTENSIONS = "{'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}"
+app.config['UPLOAD_FOLDER'] = "./uploads"
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
@@ -84,9 +88,23 @@ def delete_story():
     storyData.remove({"_id": ObjectId(storyId)})
     return redirect(url_for("stories"))
 
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route("/publish_story", methods=["POST"])
+
+@app.route("/publish_story", methods=['GET', 'POST'])
 def publish_story():
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'picture' not in request.files:
+            print("nopic")
+        file = request.files['picture']
+        
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
     storys = storyData
     storys.insert_one(request.form.to_dict())
     return redirect(url_for('stories'))

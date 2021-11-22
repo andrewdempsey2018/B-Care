@@ -6,21 +6,25 @@
     <div class="row" id="login-block">
         <div class="col-md-4 offset-md-4">
             <div class="login-form bg-light mt-4 p-4">
-                <form action="{{ url_for('publish_story') }}" method="POST" class="row g-3">
+                <form action="{{ url_for('publish_story') }}" method="POST" class="row g-3"
+                    enctype="multipart/form-data">
                     <h4>Share your inspirational story</h4>
-                    <div class="col-12">
+                    <div class=" col-12">
                         <label>Title</label>
                         <input type="text" id="title" name="title" class="form-control"
                             placeholder="add your title here" required>
-                    </div>
-                    <div class="col-12">
-                        <label>Your story</label>
-                        <textarea type="text" id="text" name="text" class="form-control"
-                            placeholder="type your story here" style="min-height:300px" required></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn section-button float-end">Tell your story</button>
-                    </div>
+                        <label>Add a picture (optional)</label>
+                        <div class="col-12">
+                            <input type="file" class="btn" id="picture" name="picture">
+                        </div>
+                        <div class="col-12">
+                            <label>Your story</label>
+                            <textarea type="text" id="text" name="text" class="form-control"
+                                placeholder="type your story here" style="min-height:300px" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn section-button float-end">Tell your story</button>
+                        </div>
                 </form>
                 <hr class="mt-4">
             </div>
