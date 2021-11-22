@@ -20,13 +20,21 @@
                         <div class="col-12">
                             <label>Your story</label>
                             <textarea type="text" id="text" name="text" class="form-control"
-                                placeholder="type your story here" style="min-height:300px" required></textarea>
+                                placeholder="type your story here" style="min-height:200px" required></textarea>
                         </div>
                         <div class="col-12">
                             <button type="submit" class="btn section-button float-end">Tell your story</button>
                         </div>
+                        <div class="col-12">
+                            <hr class="mt-4">
+                        </div>
                 </form>
-                <hr class="mt-4">
+
+                {% with messages = get_flashed_messages() %}
+                {% for message in messages %}
+                <label>{{message}}</label>
+                {% endfor %}
+                {% endwith %}
             </div>
         </div>
     </div>

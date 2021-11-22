@@ -34,12 +34,7 @@
                 <div class="card story-card zoom-effect scroll chatbox">
                     <div class="card-img">
                         <!--generate image url using jinja. generate random number used to select a static image-->
-                        {% set imgurl1 ="../static/img/face" %}
-                        {% set imgurl2int = range(1, 15) | random %}
-                        {% set imgurl2string = imgurl2int|string %}
-                        {% set imgurl3 = ".png" %}
-                        {% set fullurl = imgurl1 + imgurl2string + imgurl3 %}
-                        <img src="{{fullurl}}" alt="user image" class="story-img img-fluid">
+                        <img src="./static/uploads/{{story.picture}}" alt="user image" class="story-img img-fluid rounded-circle">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">{{ story.title }}</h4>
