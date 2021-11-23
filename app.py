@@ -5,6 +5,8 @@ from bson.objectid import ObjectId
 from werkzeug import debug
 import gevent
 import os
+from werkzeug.utils import secure_filename
+import os.path
 
 live_userlist = ""
 
@@ -33,6 +35,10 @@ if os.environ.get("DEBUG") == 'True':
     app.debug = True
 else:
     app.debug = False
+
+# picture file types allowed for upload
+ALLOWED_EXTENSIONS = "{'pdf', 'png', 'jpg', 'jpeg', 'gif'}"
+app.config['UPLOAD_FOLDER'] = "./static/uploads"
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -84,11 +90,38 @@ def delete_story():
     storyData.remove({"_id": ObjectId(storyId)})
     return redirect(url_for("stories"))
 
+# Does the file end with one of the allowed extensions?
 
-@app.route("/publish_story", methods=["POST"])
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+@app.route("/publish_story", methods=['GET', 'POST'])
 def publish_story():
+
+    filename = "symbol.png"
+
+    if request.method == 'POST':
+        # set the image to the placeholder if no image has
+        # been provided by the user
+
+        file = request.files['picture']
+
+        if file and not allowed_file(file.filename):
+            flash('Only image files allowed')
+            #return redirect(request.url)
+            return redirect(url_for("create_story"))
+
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
     storys = storyData
-    storys.insert_one(request.form.to_dict())
+    x = request.form.to_dict()
+    x['picture'] = filename
+    storys.insert_one(x)
     return redirect(url_for('stories'))
 
 
@@ -100,6 +133,7 @@ def edit_story():
                   {
         'title': request.form.get('title'),
         'text': request.form.get('text'),
+        'picture': request.form.get('picture'),
     })
     return redirect(url_for('stories'))
 
@@ -251,6 +285,7 @@ def handle_message(data):
 
 # ------------------------------------------ #
 
+
 @socketio.on('connect')
 def test_connect():
 
@@ -258,11 +293,11 @@ def test_connect():
     chatUsers.insert_one({"name": session["user"]})
 
     # get all usernames stored in the database
-    clients=chatUsers.find()
+    clients = chatUsers.find()
 
     # parse all usernames into a list so that we may send it to the clients local chat.js
     # so that it may be used to updaate their user interface showing a complete list of connected clients
-    client_names=[]
+    client_names = []
     for client in clients:
         client_names.append(client['name'])
 
@@ -271,6 +306,8 @@ def test_connect():
     print('Client connected')
 
 # remove remove this particular client name from the database when they leave the chatroom
+
+
 @socketio.on('disconnect')
 def test_disconnect():
     chatUsers.delete_one({"name": session["user"]})
@@ -282,6 +319,7 @@ def test_disconnect():
 # if os tells app to run in debug mode, socket io
 # will be turned off. For production, socket IO
 # will be on
+
 
 if __name__ == '__main__':
     if app.debug:
