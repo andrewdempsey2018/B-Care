@@ -20,7 +20,7 @@
 <!-- Breast Cancer Awareness section -->
 <section>
     <div class="container text-center" id="landing-about">
-        <div class="row">
+        <div class="row" data-aos="zoom-in-down">
             <h2 class="section-heading-1 pb-2">
                 BREAST CANCER AWARENESS
             </h2>
@@ -55,13 +55,13 @@
 </section>
 <!-- Story section -->
 <section class="mb-5 bg-story">
-    <div class="container">
+    <div class="container" data-aos="zoom-in-down">
         <div class="row">
             <h2 class="section-heading-1 text-uppercase text-center">Share a Story</h2>
         </div>
         <hr class="heading-hr mx-auto">
     </div>
-    <div class="container">
+    <div class="container" data-aos="zoom-in-down">
         <div class="row">
             <div class="col-lg-6 col-sm-12 text-center">
                 <img src="{{ url_for('static', filename='img/share_story_transparent.png') }}"
@@ -87,13 +87,13 @@
 </section>
 <!-- Chat section -->
 <section>
-    <div class="container">
+    <div class="container" data-aos="zoom-in-down">
         <div class="row">
             <h2 class="section-heading-1 text-uppercase text-center">Live Chat</h2>
         </div>
         <hr class="heading-hr mx-auto">
     </div>
-    <div class="container">
+    <div class="container" data-aos="zoom-in-down">
         <div class="row mt-5">
             <div class="col-lg-6 col-sm-12 para-center pt-3">
                 <p class="section-para">
@@ -123,13 +123,13 @@
 </section>
 <!-- News section -->
 <section class="bg-news pb-1">
-    <div class="container">
+    <div class="container" data-aos="zoom-in-down">
         <div class="row">
             <h2 class="section-heading-1 text-uppercase text-center">News</h2>
         </div>
         <hr class="heading-hr mx-auto">
     </div>
-    <div class="container my-5">
+    <div class="container my-5" data-aos="zoom-in-down">
         <div class="row mt-5">
             {% for article in news %}
                 <div class="col-lg-4 col-md-6 mb-5 justify-content-center d-flex">
