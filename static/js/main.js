@@ -18,7 +18,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// ----------- Modals
+// ----------- Modal for stories page
 
 // Get the modal
 const modal = document.getElementById("modal");
@@ -37,8 +37,7 @@ Array.from(delete_buttons).forEach(button => {
   button.onclick = () => {
     modal_target = button.getAttribute('data-story');
     document.getElementById('modal_delete_button').setAttribute('href', "delete_story?" + "storyId=" + modal_target);
-    console.log(modal_target);
-      modal.style.display = "block";
+    modal.style.display = "block";
   }
 })
 
@@ -57,4 +56,14 @@ window.onclick = (event) => {
   }
 }
 
-// ----------- Modals
+// ----------- Specific modal code for admin page
+
+const delete_buttons_admin = document.getElementsByClassName("delete_button_admin");
+
+Array.from(delete_buttons_admin).forEach(button => {
+  button.onclick = () => {
+    modal_target = button.getAttribute('data-admin');
+    document.getElementById('modal_delete_button').setAttribute('href', "delete_admin?" + "userId=" + modal_target);
+    modal.style.display = "block";
+  }
+})
